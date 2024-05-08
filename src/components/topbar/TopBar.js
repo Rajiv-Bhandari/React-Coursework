@@ -35,8 +35,8 @@ export default function TopBar() {
           {/* Conditionally render profile menu */}
           {isProfileMenuOpen && (
             <div className="profileMenu">
-              <p className="profileMenuItem">Profile</p>
-              <p className="profileMenuItem">Change Password</p>
+              <Link to="/profile" className="profileMenuItem">Profile</Link>
+              <Link to="/changepassword" className="profileMenuItem">Change Password</Link>
             </div>
           )}
         </div>
