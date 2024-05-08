@@ -56,3 +56,24 @@
     display: flex;
     align-items: center;
 }
+.profileMenu {
+    position: absolute;
+    top: 40px;
+    right: 10;
+    background-color: #ffffff;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    padding: 10px;
+  }
+  
+  .profileMenuItem {
+    cursor: pointer;
+  }
+  
+  .topSearchIcon {
+    margin-left: 10px;
+    cursor: pointer;
+  }
+  .profileMenuItem:hover {
+    background-color: #9cbcd9;
+  }
