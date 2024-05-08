@@ -56,3 +56,23 @@
     display: flex;
     align-items: center;
 }
+.profileMenu {
+    position: absolute;
+    top: 40px;
+    right: 250px; /* Added 'px' */
+    background-color: #ffffff;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    display: flex; /* Added */
+    flex-direction: column; /* Added */
+}
+
+.profileMenuItem {
+    cursor: pointer;
+    margin-bottom: 5px; /* Added spacing between menu items */
+}
+
+.profileMenuItem:hover {
+    background-color: #9cbcd9;
+}
