@@ -1,7 +1,32 @@
-import React from 'react';
+import React, { useState } from 'react';
 import "./loginsignup.css";
 
 export default function Loginsignup() {
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    try {
+      const response = await fetch("https://localhost:7186/api/Auth/Login", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify({ username, password })
+      });
+
+      if (!response.ok) {
+        throw new Error('Failed to login');
+      }
+
+      // Handle successful login, such as redirecting the user or storing authentication token
+    } catch (error) {
+      console.error('Error:', error);
+    }
+  };
+
   return (
     <div>
       <div className="section">
@@ -18,39 +43,22 @@ export default function Loginsignup() {
                       <div className="center-wrap">
                         <div className="section text-center">
                           <h4 className="mb-4 pb-3">Log In</h4>
-                          <div className="form-group">
-                            <input type="email" name="logemail" className="form-style" placeholder="Your UserName" id="logemail" autoComplete="off"/>
-                            <i className=""></i>
-                          </div>
-                          <div className="form-group mt-2">
-                            <input type="password" name="logpass" className="form-style" placeholder="Your Password" id="logpass" autoComplete="off"/>
-                            <i className="input-icon uil uil-lock-alt"></i>
-                          </div>
-                          <a href="#" className="btn mt-4">submit</a>
+                          <form onSubmit={handleSubmit}>
+                            <div className="form-group">
+                              <input type="email" name="logemail" className="form-style" placeholder="Your UserName" id="logemail" autoComplete="off" value={username} onChange={(e) => setUsername(e.target.value)} />
+                              <i className=""></i>
+                            </div>
+                            <div className="form-group mt-2">
+                              <input type="password" name="logpass" className="form-style" placeholder="Your Password" id="logpass" autoComplete="off" value={password} onChange={(e) => setPassword(e.target.value)} />
+                              <i className="input-icon uil uil-lock-alt"></i>
+                            </div>
+                            <button type="submit" className="btn mt-4">submit</button>
+                          </form>
                           <p className="mb-0 mt-4 text-center"><a href="#0" className="link">Forgot your password?</a></p>
                         </div>
                       </div>
                     </div>
-                    <div className="card-back">
-                      <div className="center-wrap">
-                        <div className="section text-center">
-                          <h4 className="mb-4 pb-3">Sign Up</h4>
-                          <div className="form-group">
-                            <input type="text" name="logname" className="form-style" placeholder="Your Full Name" id="logname" autoComplete="off"/>
-                            <i className="input-icon uil uil-user"></i>
-                          </div>
-                          <div className="form-group mt-2">
-                            <input type="email" name="logemail" className="form-style" placeholder="Your UserName" id="logemail" autoComplete="off"/>
-                            <i className="input-icon uil uil-at"></i>
-                          </div>
-                          <div className="form-group mt-2">
-                            <input type="password" name="logpass" className="form-style" placeholder="Your Password" id="logpass" autoComplete="off"/>
-                            <i className="input-icon uil uil-lock-alt"></i>
-                          </div>
-                          <a href="#" className="btn mt-4">submit</a>
-                        </div>
-                      </div>
-                    </div>
+                    {/* Sign Up card */}
                   </div>
                 </div>
               </div>
