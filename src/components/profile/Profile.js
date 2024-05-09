@@ -46,7 +46,7 @@ export default function Profile() {
   return (
     <>
     <div className="profile">
-      <h2>Your Details</h2>
+      <h2 class="my-3">Your Details</h2>
       <div className="profileDetails">
         <div>
           <label htmlFor="fullName">Full Name:</label>
@@ -56,10 +56,11 @@ export default function Profile() {
           <label htmlFor="username">Username:</label>
           <input type="text" id="username" name="username" value={formData.username} onChange={handleInputChange} />
         </div>
+      </div>
+        <div className='text-center m-3'>
         <button className="updateButton" onClick={handleUpdate}>Update</button>
       </div>
     </div>
-    <Footer/>
     </>
   );
 }

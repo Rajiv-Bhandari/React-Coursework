@@ -4,10 +4,7 @@
     --clr-classicblue: #0A1828;
     --clr-turquoise: #178582;
     --clr-gold: #BFA181;
-    --clr-grey: #6c808e;
-
-
-    
+    --clr-grey: #6c808e;    
 }
 body{
     background-color: var(--clr-classicblue);
@@ -104,8 +101,16 @@ body{
 }
 
 .profileMenuItem:hover {
-    background-color: #9cbcd9;
+    background-color: var(--clr-gold);
+    color: var(--clr-classicblue);
+    transition: all 0.3s linear;
 }
+.profileMenu a:hover {
+    color: var(--clr-classicblue) !important;
+    text-decoration: none;
+}
+
+
 .topRight a{
     color: var(--clr-gold);
     

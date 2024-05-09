@@ -1,3 +1,12 @@
+:root {
+  --clr-narvik:#EAE7DD;
+  --clr-Sorrellbrown: #99775C;
+  --clr-classicblue: #0A1828;
+  --clr-turquoise: #178582;
+  --clr-gold: #BFA181;
+  --clr-green: #a9dea;
+
+}
 .center-container {
     display: flex;
     justify-content: center;
@@ -5,5 +14,7 @@
   }
   
   .addPostButton {
+    color: var(--clr-blue);
+    background-color: var(--clr-turquoise);
   }
   

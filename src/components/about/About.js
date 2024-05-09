@@ -37,6 +37,7 @@ export default function About() {
         <div class="circle3"></div>
     
     </div>
+    <footer />
 
     </div>
     <Footer/>

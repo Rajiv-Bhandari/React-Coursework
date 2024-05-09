@@ -15,7 +15,8 @@ body {
 }
 
 header {
-    background-color: var(--clr-gold)  !important;
+    /* background-color: var(--clr-gold)  !important; */
+    background: url(https://www.freepik.com/free-photo/tall-trees-forest-mountains-covered-with-fog_9971139.htm#fromView=search&page=1&position=16&uuid=b8e0e68d-9e51-4d63-b47b-e4f1798199e0);
     color: var(--clr-classicblue);
     text-align: center;
     padding: 20px 0;
