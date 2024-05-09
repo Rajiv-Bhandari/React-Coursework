@@ -2,10 +2,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 15vh; /* Center vertically */
   }
   
   .addPostButton {
-    /* Add any additional styles for the button */
   }
   
