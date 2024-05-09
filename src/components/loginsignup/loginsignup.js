@@ -50,7 +50,7 @@ export default function Loginsignup() {
                               <i className="input-icon uil uil-user"></i>
                             </div>
                             <div className="form-group mt-2">
-                              <input type="text" name="username" className="form-style" placeholder="Your UserName" id="username" autoComplete="off" value={username} onChange={(e) => setUsername(e.target.value)} />
+                              <input type="email" name="username" className="form-style" placeholder="Your UserName" id="username" autoComplete="off" value={username} onChange={(e) => setUsername(e.target.value)} />
                               <i className="input-icon uil uil-at"></i>
                             </div>
                             <div className="form-group mt-2">
