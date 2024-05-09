@@ -24,3 +24,17 @@
     color: #333;
   }
   
+  .bar-graph {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    height: 200px;
+  }
+  
+  .bar-graph .bar {
+    width: 20px;
+    background-color: #e74c3c; /* You can change the color */
+    border-radius: 5px;
+  }
+  
+ 
