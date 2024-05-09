@@ -31,7 +31,6 @@ const BlogPage = () => {
 
   return (
     <div>
-      <AddPost />
       <h1>Blog Page</h1>
       {blogs.map((blog) => (
         <Blog
