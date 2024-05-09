@@ -1,5 +1,6 @@
 import React from 'react';
 import './about.css';
+import '../footer/footer';
 
 export default function About() {
   return (
@@ -35,6 +36,7 @@ export default function About() {
         <div class="circle3"></div>
     
     </div>
+    <footer />
 
     </div>
   );
