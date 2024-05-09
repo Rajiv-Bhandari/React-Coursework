@@ -113,7 +113,7 @@ function Post() {
     <>
       <div>
         <div className="post-container">
-          <h2>Music Blogs</h2>
+          <h2 class="me-3">Music Blogs</h2>
           {musicBlogs.map((blog) => (
             <div key={blog.id} className="blog">
               <h4>{blog.title}</h4>
@@ -135,7 +135,7 @@ function Post() {
         </div>
 
         <div className="post-container">
-          <h2 class="me-2">Movie Blogs</h2>
+          <h2 class="me-3">Movie Blogs</h2>
           {movieBlogs.map((blog) => (
             <div key={blog.id} className="blog">
               <h4>{blog.title}</h4>
@@ -157,7 +157,7 @@ function Post() {
         </div>
 
         <div className="post-container">
-          <h2>Tech Blogs</h2>
+          <h2 class="me-4">Tech Blogs</h2>
 
           {techBlogs.map((blog) => (
             <div key={blog.id} className="blog">
