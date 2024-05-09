@@ -16,7 +16,6 @@ export default function home() {
         <Post />
         <Sidebar />
         <Contact />
-        <Footer />
       </div>
     </>
   );
