@@ -85,7 +85,7 @@ export default function Post() {
         <div className="row">
           <div className="col-lg-8">
             <div className="posts my-3">
-              <h4 className='text-center mb-3' >Blogs</h4>
+              <h4 className=' page-title text-center mb-3' >Blogs</h4>
               <div className="row justify-content-center px-2">
                 <div className="col-lg-6 mb-2">
                 <div className="blog-border">
@@ -96,11 +96,13 @@ export default function Post() {
                   </Link>
                   <p className="blog-topic mb-1">Music Life</p>
                   <h5 className="blog-topic">
+                  <Link to="/post/singlepost/singlepost">
                     Lorem ipsum dolor  adipisicing elit.
+                    </Link>
                   </h5>
                   <p className="blog-topic">1 hour ago</p>
 
-                  <p className="blog">Lorem ipsum dolor sit amet consectetur adipisicing elit. Error officiis dolore omnis. Ullam minima, expedita quibusdam distinctio voluptates sapiente placeat recusandae reiciendis iste, aliquam in. Impedit aspernatur repudiandae optio ex!</p>
+                  <p className="blog-info mx-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Error officiis dolore omnis. Ullam minima, expedita quibusdam distinctio voluptates sapiente placeat recusandae reiciendis iste, aliquam in. Impedit aspernatur repudiandae optio ex!</p>
                 </div>
                 
                 </div>
@@ -113,11 +115,13 @@ export default function Post() {
                   </Link>
                   <p className="blog-topic mb-1">Music Life</p>
                   <h5 className="blog-topic">
+                  <Link to="/post/singlepost/singlepost">
                     Lorem ipsum dolor  adipisicing elit.
+                    </Link>
                   </h5>
                   <p className="blog-topic">1 hour ago</p>
 
-                  <p className="blog">Lorem ipsum dolor sit amet consectetur adipisicing elit. Error officiis dolore omnis. Ullam minima, expedita quibusdam distinctio voluptates sapiente placeat recusandae reiciendis iste, aliquam in. Impedit aspernatur repudiandae optio ex!</p>
+                  <p className="blog-info mx-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Error officiis dolore omnis. Ullam minima, expedita quibusdam distinctio voluptates sapiente placeat recusandae reiciendis iste, aliquam in. Impedit aspernatur repudiandae optio ex!</p>
                 </div>
                 
                 </div>
@@ -130,14 +134,18 @@ export default function Post() {
                   </Link>
                   <p className="blog-topic mb-1">Music Life</p>
                   <h5 className="blog-topic">
+                  <Link to="/post/singlepost/singlepost">
                     Lorem ipsum dolor  adipisicing elit.
+                    </Link>
                   </h5>
                   <p className="blog-topic">1 hour ago</p>
 
-                  <p className="blog">Lorem ipsum dolor sit amet consectetur adipisicing elit. Error officiis dolore omnis. Ullam minima, expedita quibusdam distinctio voluptates sapiente placeat recusandae reiciendis iste, aliquam in. Impedit aspernatur repudiandae optio ex!</p>
+                  <p className="blog-info mx-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Error officiis dolore omnis. Ullam minima, expedita quibusdam distinctio voluptates sapiente placeat recusandae reiciendis iste, aliquam in. Impedit aspernatur repudiandae optio ex!</p>
                 </div>
                 
                 </div>
+               
+                
 
 
                 
