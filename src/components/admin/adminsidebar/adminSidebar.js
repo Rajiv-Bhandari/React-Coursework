@@ -8,19 +8,19 @@ export default function AdminSidebar() {
         <h3>Admin Dashboard</h3>
         <ul>
           <li>
-            <Link to="/admin/create-blog">
+            <Link to="/admin/dashboard">
               <i className="fas fa-pencil-alt"></i> 
               Dashboard
             </Link>
           </li>
           <li>
-            <Link to="/admin/create-user">
+            <Link to="/admin/createadmin">
               <i className="fas fa-user-plus"></i> 
               Create Admin
             </Link>
           </li>
           <li>
-            <Link to="/admin/popular-blogs">
+            <Link to="/admin/popularblogs">
               <i className="fas fa-chart-line"></i> 
               Popular Blogs
             </Link>

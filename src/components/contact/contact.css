@@ -1,0 +1,117 @@
+.contactform-content{
+    margin: 30px 0;
+  }
+  .contact-header h3{
+    color: var(--clr-purple);
+    font-size: 18px;
+  }
+  .contact-leftcontent{
+    padding: 5px 20px;
+    border-radius: 8px;
+    box-shadow: 0 6px 12px 0 rgb(0 0 0 / 15%);
+  }
+  .location-detail{
+    margin:10px 20px;
+  }
+  .contactdetail-list{
+    padding-bottom: 10px;
+    margin:15px 0;
+  }
+  .innerdetail-icon{
+    width: 40px;
+    height:40px;
+    border-radius: 50%;
+    border: 1px solid var(--clr-lightpurple);
+    background-color: var(--clr-lightpurple);
+    display: grid;
+    place-items: center;
+  }
+  .icon-position{
+    position: absolute;
+    color: var(--clr-purple);    
+  }
+  .contact-innerdetail h5{
+    color: var(--clr-purple);
+    font-size: 18px;
+  }
+  .contact-innerdetail a{
+    text-decoration: none;
+    color: black;
+    transition: all 0.3s linear;
+  }
+  .contact-innerdetail p{
+    font-size: 16px;
+  }
+  .contact-innerdetail a:hover{
+    color: var(--clr-purple) ;
+  }
+  .contact-map iframe{
+    border-radius: 9px;
+  }
+  .form-content{
+    border-radius: 8px;
+    box-shadow: 0 6px 12px 0 rgb(0 0 0 / 15%);
+    padding: 20px 40px;
+  }
+  .form-details input{
+    padding: 15px;
+    color: #8a97a0;
+    border:none;
+    border-radius: 7px;
+    outline: none;
+    border-bottom:1px solid #e8eeef;
+    background: rgba(207, 202, 202, 0.1);
+    box-shadow: 0 1px 0 rgb(0 0 0 / 3%) inset;  
+  }
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+  }
+  
+  input[type=number] {
+  -moz-appearance: textfield;
+  appearance: textfield;
+  }
+  select {
+    padding: 15px ;
+    border: none;
+    border-radius: 7px;
+    background: rgba(207, 202, 202, 0.1);
+    color: #8a97a0;
+    box-shadow: 0 1px 0 rgb(0 0 0 / 3%) inset;
+  }
+  select option{
+    background-color: var(--clr-lightpurple);
+    color: black;
+  }
+  textarea{
+    border: none;
+    padding:9px;
+    border-radius: 7px;
+    background-color:rgba(207, 202, 202, 0.1);
+  }
+  
+  .form-btn button{
+    padding:9px 20px;
+    border-radius: 15px;
+    border: none;
+    background-color: var(--clr-lightpurple);
+    box-shadow: 0 10px 50px var(--clr-purple);
+    transition: all 0.3s linear;
+  }
+  .form-btn a{
+    color: var(--clr-purple);
+    text-decoration: none;
+  }
+  .form-btn i{
+    color: var(--clr-purple);
+  }
+  .form-btn button:hover{
+    background-color:var(--clr-lightblue);
+    box-shadow: 0 10px 50px var(--clr-lightblue)
+  }
+  
+  
+  
+  

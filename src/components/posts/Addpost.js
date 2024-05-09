@@ -25,14 +25,38 @@ export default function AddPost() {
     setSelectedCategory(event.target.value);
   };
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
-    // Handle submission logic here
-    console.log('Title:', title);
-    console.log('Image:', image);
-    console.log('Description:', description);
-    console.log('Category:', selectedCategory);
+    
+    const data = {
+      title: title,
+      description: description
+    };
+  
+    try {
+      const response = await fetch('https://localhost:7186/api/post/create-post', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(data)
+      });
+  
+      if (response.ok) {
+        console.log('Post created successfully!');
+        // Optionally, you can reset the form fields after successful submission
+        setTitle('');
+        setImage('');
+        setDescription('');
+        setSelectedCategory(categories[0]);
+      } else {
+        console.error('Failed to create post.');
+      }
+    } catch (error) {
+      console.error('Error:', error);
+    }
   };
+  
 
   return (
     <div className="add-post-container">
@@ -42,7 +66,7 @@ export default function AddPost() {
         <input type="text" id="title" value={title} onChange={handleTitleChange} required />
         
         <label htmlFor="image">Image:</label>
-        <input type="file" id="image" value={image} onChange={handleImageChange} required />
+        <input type="file" id="image" value={image} onChange={handleImageChange} />
 
         <label htmlFor="description">Description:</label>
         <textarea id="description" value={description} onChange={handleDescriptionChange} required />
