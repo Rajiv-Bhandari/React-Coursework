@@ -1,3 +1,4 @@
+import Footer from "../footer/footer";
 import Header from "../header/Header";
 import Post from "../posts/posts";
 import Sidebar from "../sidebar/sidebar";
@@ -9,8 +10,9 @@ export default function home() {
       <Header />
       <div className="home">
         <Post />
-        <Sidebar />
+        {/* <Sidebar /> */}
       </div>
+      <Footer />
     </>
   );
 }
