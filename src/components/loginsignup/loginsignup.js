@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import "./loginsignup.css";
+import Footer from "../footer/footer";
 
 export default function Loginsignup() {
   const [fullName, setName] = useState("");
@@ -30,6 +31,7 @@ export default function Loginsignup() {
   };
 
   return (
+    <>
     <div>
       <div className="section">
         <div className="center-container">
@@ -70,5 +72,7 @@ export default function Loginsignup() {
         </div>
       </div>
     </div>
+    <Footer/>
+    </>
   );
 }
