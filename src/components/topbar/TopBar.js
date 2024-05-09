@@ -30,7 +30,7 @@ export default function TopBar() {
           <li className="topListItem"><Link to="/contact">CONTACT</Link></li>
 
           <li className="topListItem"><Link to="/loginsignup">LOGOUT</Link></li>
-          <li className="topListItem"><Link to="/admindashboard">ADMIN</Link></li>
+          <li className="topListItem"><Link to="/admin/dashboard">ADMIN</Link></li>
         </ul>
       </div>
       <div className="topRight">
