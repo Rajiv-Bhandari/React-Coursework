@@ -1,163 +1,185 @@
-// import "./posts.css";
-// import Sidebar from "../sidebar/sidebar";
-// import Header from "../header/Header"; 
+import "./posts.css";
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import Sidebar from "../sidebar/sidebar";
 
+const initialMusicBlogs = [
+  {
+    id: 1,
+    title: "Music Blog 1",
+    author: "Author 1",
+    content: "Content 1",
+    liked: false,
+  },
+  {
+    id: 2,
+    title: "Music Blog 2",
+    author: "Author 2",
+    content: "Content 2",
+    liked: false,
+  },
+  {
+    id: 3,
+    title: "Music Blog 3",
+    author: "Author 3",
+    content: "Content 3",
+    liked: false,
+  },
+];
 
-// export default function Post() {
-//   return(
-//   <>
-//   <Header />
-//    <div className="posts my-3">
-//     <div className="row justify-content-between px-2">
-//       <div className="col-lg-4 mb-2">
-//         <div >
-//           <img src="https://img.freepik.com/free-photo/painting-mountain-lake-with-mountain-background_188544-9126.jpg?t=st=1715174753~exp=1715178353~hmac=154409cdeabb627619eb694fdac90d51b415da63650e5dd0ee975ae597de8bcf&w=1060" alt="blog-img" width="100%" className="rounded-2"/>
-//         </div>
-//         <p className="blog-topic mb-1">Music Life</p>
-//         <h5 className="blog-topic">
-//           Lorem ipsum dolor  adipisicing elit.
-//         </h5>
-//         <p className="blog-topic">1 hour ago</p>
+const initialMovieBlogs = [
+  {
+    id: 1,
+    title: "Movie Blog 1",
+    author: "Author 1",
+    content: "Content 1",
+    liked: false,
+  },
+  {
+    id: 2,
+    title: "Movie Blog 2",
+    author: "Author 2",
+    content: "Content 2",
+    liked: false,
+  },
+  {
+    id: 3,
+    title: "Movie Blog 3",
+    author: "Author 3",
+    content: "Content 3",
+    liked: false,
+  },
+];
 
-//         <p className="blog">Lorem ipsum dolor sit amet consectetur adipisicing elit. Error officiis dolore omnis. Ullam minima, expedita quibusdam distinctio voluptates sapiente placeat recusandae reiciendis iste, aliquam in. Impedit aspernatur repudiandae optio ex!</p>
-//       </div>
-//       <div className="col-lg-4">
-//         <div >
-//           <img src="https://img.freepik.com/free-photo/painting-mountain-lake-with-mountain-background_188544-9126.jpg?t=st=1715174753~exp=1715178353~hmac=154409cdeabb627619eb694fdac90d51b415da63650e5dd0ee975ae597de8bcf&w=1060" alt="blog-img" width="100%" className="rounded-2"/>
-//         </div>
-//         <p className="blog-topic mb-1">Music Life</p>
-//         <h5 className="blog-topic">
-//           Lorem ipsum dolor  adipisicing elit.
-//         </h5>
-//         <p className="blog-topic">1 hour ago</p>
+const initialTechBlogs = [
+  {
+    id: 1,
+    title: "Tech Blog 1",
+    author: "Author 1",
+    content: "Content 1",
+    liked: false,
+  },
+  {
+    id: 2,
+    title: "Tech Blog 2",
+    author: "Author 2",
+    content: "Content 2",
+    liked: false,
+  },
+  {
+    id: 3,
+    title: "Tech Blog 3",
+    author: "Author 3",
+    content: "Content 3",
+    liked: false,
+  },
+];
 
-//         <p className="blog">Lorem ipsum dolor sit amet consectetur adipisicing elit. Error officiis dolore omnis. Ullam minima, expedita quibusdam distinctio voluptates sapiente placeat recusandae reiciendis iste, aliquam in. Impedit aspernatur repudiandae optio ex!</p>
-//       </div>
-//       <div className="col-lg-4">
-//         <div >
-//           <img src="https://img.freepik.com/free-photo/painting-mountain-lake-with-mountain-background_188544-9126.jpg?t=st=1715174753~exp=1715178353~hmac=154409cdeabb627619eb694fdac90d51b415da63650e5dd0ee975ae597de8bcf&w=1060" alt="blog-img" width="100%" className="rounded-2"/>
-//         </div>
-//         <p className="blog-topic mb-1">Music Life</p>
-//         <h5 className="blog-topic">
-//           Lorem ipsum dolor  adipisicing elit.
-//         </h5>
-//         <p className="blog-topic">1 hour ago</p>
+function Post() {
+  const [musicBlogs, setMusicBlogs] = useState(initialMusicBlogs);
+  const [movieBlogs, setMovieBlogs] = useState(initialMovieBlogs);
+  const [techBlogs, setTechBlogs] = useState(initialTechBlogs);
 
-//         <p className="blog">Lorem ipsum dolor sit amet consectetur adipisicing elit. Error officiis dolore omnis. Ullam minima, expedita quibusdam distinctio voluptates sapiente placeat recusandae reiciendis iste, aliquam in. Impedit aspernatur repudiandae optio ex!</p>
-//       </div>
-//       <div className="col-lg-4">
-//         <div >
-//           <img src="https://img.freepik.com/free-photo/painting-mountain-lake-with-mountain-background_188544-9126.jpg?t=st=1715174753~exp=1715178353~hmac=154409cdeabb627619eb694fdac90d51b415da63650e5dd0ee975ae597de8bcf&w=1060" alt="blog-img" width="100%" className="rounded-2"/>
-//         </div>
-//         <p className="blog-topic mb-1">Music Life</p>
-//         <h5 className="blog-topic">
-//           Lorem ipsum dolor  adipisicing elit.
-//         </h5>
-//         <p className="blog-topic">1 hour ago</p>
+  const handleLike = (blogId, category) => {
+    switch (category) {
+      case "music":
+        setMusicBlogs((prevBlogs) =>
+          prevBlogs.map((blog) =>
+            blog.id === blogId ? { ...blog, liked: !blog.liked } : blog
+          )
+        );
+        break;
+      case "movies":
+        setMovieBlogs((prevBlogs) =>
+          prevBlogs.map((blog) =>
+            blog.id === blogId ? { ...blog, liked: !blog.liked } : blog
+          )
+        );
+        break;
+      case "tech":
+        setTechBlogs((prevBlogs) =>
+          prevBlogs.map((blog) =>
+            blog.id === blogId ? { ...blog, liked: !blog.liked } : blog
+          )
+        );
+        break;
+      default:
+        break;
+    }
+  };
 
-//         <p className="blog">Lorem ipsum dolor sit amet consectetur adipisicing elit. Error officiis dolore omnis. Ullam minima, expedita quibusdam distinctio voluptates sapiente placeat recusandae reiciendis iste, aliquam in. Impedit aspernatur repudiandae optio ex!</p>
-//       </div>
-//       <div className="col-lg-4">
-//   <Sidebar/>
-//   </div>
-//     </div>
-//   </div>
- 
-   
-
-
-  
-//   </>
-//   );
-// }
-import React from 'react';
-import Sidebar from '../sidebar/sidebar';
-import Header from '../header/Header';
-import './posts.css';
-import { Link } from 'react-router-dom';
-
-
-export default function Post() {
   return (
     <>
-      <Header />
-      <div className="container-fluid">
-        <div className="row">
-          <div className="col-lg-8">
-            <div className="posts my-3">
-              <h4 className=' page-title text-center mb-3' >Blogs</h4>
-              <div className="row justify-content-center px-2">
-                <div className="col-lg-6 mb-2">
-                <div className="blog-border">
-                <Link to="/post/singlepost/singlepost"> {/* Add Link here */}
-                    <div>
-                      <img src="https://img.freepik.com/free-photo/painting-mountain-lake-with-mountain-background_188544-9126.jpg?t=st=1715174753~exp=1715178353~hmac=154409cdeabb627619eb694fdac90d51b415da63650e5dd0ee975ae597de8bcf&w=1060" alt="blog-img" width="100%" className="rounded-2" />
-                    </div>
-                  </Link>
-                  <p className="blog-topic mb-1">Music Life</p>
-                  <h5 className="blog-topic">
-                  <Link to="/post/singlepost/singlepost">
-                    Lorem ipsum dolor  adipisicing elit.
-                    </Link>
-                  </h5>
-                  <p className="blog-topic">1 hour ago</p>
-
-                  <p className="blog-info mx-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Error officiis dolore omnis. Ullam minima, expedita quibusdam distinctio voluptates sapiente placeat recusandae reiciendis iste, aliquam in. Impedit aspernatur repudiandae optio ex!</p>
-                </div>
-                
-                </div>
-                <div className="col-lg-6 mb-2">
-                <div className="blog-border">
-                <Link to="/post/singlepost/singlepost"> {/* Add Link here */}
-                    <div>
-                      <img src="https://img.freepik.com/free-photo/painting-mountain-lake-with-mountain-background_188544-9126.jpg?t=st=1715174753~exp=1715178353~hmac=154409cdeabb627619eb694fdac90d51b415da63650e5dd0ee975ae597de8bcf&w=1060" alt="blog-img" width="100%" className="rounded-2" />
-                    </div>
-                  </Link>
-                  <p className="blog-topic mb-1">Music Life</p>
-                  <h5 className="blog-topic">
-                  <Link to="/post/singlepost/singlepost">
-                    Lorem ipsum dolor  adipisicing elit.
-                    </Link>
-                  </h5>
-                  <p className="blog-topic">1 hour ago</p>
-
-                  <p className="blog-info mx-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Error officiis dolore omnis. Ullam minima, expedita quibusdam distinctio voluptates sapiente placeat recusandae reiciendis iste, aliquam in. Impedit aspernatur repudiandae optio ex!</p>
-                </div>
-                
-                </div>
-                <div className="col-lg-6 mb-2">
-                <div className="blog-border">
-                <Link to="/post/singlepost/singlepost"> {/* Add Link here */}
-                    <div>
-                      <img src="https://img.freepik.com/free-photo/painting-mountain-lake-with-mountain-background_188544-9126.jpg?t=st=1715174753~exp=1715178353~hmac=154409cdeabb627619eb694fdac90d51b415da63650e5dd0ee975ae597de8bcf&w=1060" alt="blog-img" width="100%" className="rounded-2" />
-                    </div>
-                  </Link>
-                  <p className="blog-topic mb-1">Music Life</p>
-                  <h5 className="blog-topic">
-                  <Link to="/post/singlepost/singlepost">
-                    Lorem ipsum dolor  adipisicing elit.
-                    </Link>
-                  </h5>
-                  <p className="blog-topic">1 hour ago</p>
-
-                  <p className="blog-info mx-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Error officiis dolore omnis. Ullam minima, expedita quibusdam distinctio voluptates sapiente placeat recusandae reiciendis iste, aliquam in. Impedit aspernatur repudiandae optio ex!</p>
-                </div>
-                
-                </div>
-               
-                
-
-
-                
-              
+      <div>
+        <div className="post-container">
+          <h2>Music Blogs</h2>
+          {musicBlogs.map((blog) => (
+            <div key={blog.id} className="blog">
+              <h4>{blog.title}</h4>
+              <p>Author: {blog.author}</p>
+              <p>{blog.content}</p>
+              <div className="blog-footer">
+                <Link to={`/blog/${blog.id}`} className="read-more">
+                  Read More
+                </Link>
+                <span
+                  className={`heart-icon ${blog.liked ? "liked" : ""}`}
+                  onClick={() => handleLike(blog.id, "music")}
+                >
+                  &#9829;
+                </span>
               </div>
             </div>
-          </div>
-          <div className="col-lg-4">
-            <Sidebar />
-          </div>
+          ))}
+        </div>
+
+        <div className="post-container">
+          <h2>Movie Blogs</h2>
+          {movieBlogs.map((blog) => (
+            <div key={blog.id} className="blog">
+              <h4>{blog.title}</h4>
+              <p>Author: {blog.author}</p>
+              <p>{blog.content}</p>
+              <div className="blog-footer">
+                <Link to={`/blog/${blog.id}`} className="read-more">
+                  Read More
+                </Link>
+                <span
+                  className={`heart-icon ${blog.liked ? "liked" : ""}`}
+                  onClick={() => handleLike(blog.id, "movies")}
+                >
+                  &#9829;
+                </span>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        <div className="post-container">
+          <h2>Tech Blogs</h2>
+
+          {techBlogs.map((blog) => (
+            <div key={blog.id} className="blog">
+              <h4>{blog.title}</h4>
+              <p>Author: {blog.author}</p>
+              <p>{blog.content}</p>
+              <div className="blog-footer">
+                <Link to={`/blog/${blog.id}`} className="read-more">
+                  Read More
+                </Link>
+                <span
+                  className={`heart-icon ${blog.liked ? "liked" : ""}`}
+                  onClick={() => handleLike(blog.id, "tech")}
+                >
+                  &#9829;
+                </span>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
     </>
   );
 }
+
+export default Post;

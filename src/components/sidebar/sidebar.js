@@ -1,12 +1,14 @@
-import React from 'react';
+import React from "react";
 import "./sidebar.css";
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 
 export default function Sidebar() {
   return (
     <div className="sidebar">
-      <Link to="/addpost" className="addPostButton">Add Post</Link>
-      <div className="sidebarItem">
+      <Link to="/addpost" className="addPostButton">
+        Add Post
+      </Link>
+      {/* <div className="sidebarItem">
         <span className="sidebarTitle">CATEGORIES</span>
         <ul className="sidebarList">
           <li className="sidebarListItem">Life</li>
@@ -24,7 +26,7 @@ export default function Sidebar() {
           <i className="sidebarIcon fab fa-twitter"></i>
           <i className="sidebarIcon fab fa-facebook"></i>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 }

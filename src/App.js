@@ -6,6 +6,7 @@ import Blog from "./components/posts/posts"
 import Singlepost from "./components/singlePost/singlepost"; 
 import LoginSignup from "./components/loginsignup/loginsignup"; 
 // import AdminSidebar from "./components/adminsidebar/AdminSidebar";
+import AdminHome from "./components/admin/adminhome/adminhome";
 
 import Profile from './components/profile/Profile';
 import Changepassword from './components/profile/Changepassword';
@@ -26,7 +27,7 @@ function App() {
 
         <Route path="/profile" element={<Profile />} />
         <Route path="/changepassword" element={<Changepassword />} />
-        {/* <Route path="/adminsidebar" element={<AdminSidebar />} />  */}
+        <Route path="/admin" element={<AdminHome />} /> 
 
       </Routes>
     </Router>
