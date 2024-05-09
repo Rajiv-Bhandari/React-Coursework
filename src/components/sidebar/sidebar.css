@@ -1,14 +1,22 @@
-/* Sidebar.css */
-
 .sidebar {
-    flex: 0 0 30%; /* Take 30% of the width, don't grow or shrink */
-    margin-right: 20px; /* Add margin between sidebar and post */
-    padding-bottom: 30px;
+    flex: 1;
+    margin: 20px;
+    padding: 20px;
     background-color: #fdfbfb;
     border-radius: 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
+  }
+  
+  .addPostButton {
+    margin-bottom: 20px;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
   }
   
   .sidebarItem {
@@ -31,23 +39,19 @@
     text-align: center;
   }
   
-  .sidebarItem > img {
-    margin-top: 15px;
-  }
-  
-  .sidebarItem > p {
-    padding: 30px;
-  }
-  
   .sidebarList {
     list-style: none;
     margin-bottom: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
   }
   
   .sidebarListItem {
-    display: inline-block;
-    width: 50%;
-    margin-top: 15px;
+    margin: 5px;
+    padding: 5px 10px;
+    background-color: #f0f0f0;
+    border-radius: 5px;
     cursor: pointer;
   }
   
@@ -60,8 +64,8 @@
   }
   
   .sidebarIcon {
-    font-size: 16px;
-    margin-left: 10px;
+    font-size: 24px;
+    margin: 0 10px;
     cursor: pointer;
   }
   

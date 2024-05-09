@@ -1,24 +1,13 @@
+import React from 'react';
 import "./sidebar.css";
+import { Link } from 'react-router-dom';
 
 export default function Sidebar() {
   return (
     <div className="sidebar">
+      <Link to="/addpost" className="addPostButton">Add Post</Link>
       <div className="sidebarItem">
-        <span className="sidebarTitle">ABOUT ME</span>
-        <img
-          src="https://images.unsplash.com/photo-1575936123452-b67c3203c357?q=80&w=500&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aW1hZ2V8ZW58MHx8MHx8fDA%3D"
-          alt=""
-        />
-
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam vel
-          explicabo, et facere quaerat, accusamus velit ad facilis quos magnam
-          fugit at aperiam illo delectus rerum consequatur. Voluptas, quisquam
-          ut.
-        </p>
-      </div>
-      <div className="sidebarItem">
-        <span className="sidebarTItle">CATEGORIES</span>
+        <span className="sidebarTitle">CATEGORIES</span>
         <ul className="sidebarList">
           <li className="sidebarListItem">Life</li>
           <li className="sidebarListItem">Music</li>
@@ -29,11 +18,11 @@ export default function Sidebar() {
         </ul>
       </div>
       <div className="sidebarItem">
-        <span className="sidebarTItle">FOLLOW US</span>
+        <span className="sidebarTitle">FOLLOW US</span>
         <div className="sidebarSocial">
-          <i className="sidebarIcon fa-brands fa-square-instagram"></i>
-          <i className="sidebarIcon fa-brands fa-square-twitter"></i>
-          <i className="sidebarIcon fa-brands fa-square-facebook"></i>
+          <i className="sidebarIcon fab fa-instagram"></i>
+          <i className="sidebarIcon fab fa-twitter"></i>
+          <i className="sidebarIcon fab fa-facebook"></i>
         </div>
       </div>
     </div>
