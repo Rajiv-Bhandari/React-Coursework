@@ -24,7 +24,6 @@ body{
     align-items: center;
     font-family: 'Josefin Sans', sans-serif;
     background-color: var(--clr-classicblue);
-    border-bottom: 1px solid var(--clr-gold);
 }
 
 .topLeft,.topRight{

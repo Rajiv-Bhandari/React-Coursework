@@ -5,6 +5,7 @@ import About from './components/about/About';
 import Blog from "./components/posts/posts"
 import Singlepost from "./components/singlePost/singlepost"; 
 import LoginSignup from "./components/loginsignup/loginsignup"; 
+import Login from "./components/loginsignup/login"; 
 import Contact from "./components/contact/contact"; 
 // import AdminSidebar from "./components/adminsidebar/AdminSidebar";
 import AdminHome from "./components/admin/adminhome/adminhome";
@@ -32,6 +33,7 @@ function App() {
         <Route path="/blogs" element={<NewBlog />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/profile" element={<Profile />} />
+        <Route path="/login" element={<Login />} />
         <Route path="/changepassword" element={<Changepassword />} />
         <Route path="/admin/createadmin" element={<AdminHome />} />
         <Route path="/admin/dashboard" element={<AdminDashboard />} />  
