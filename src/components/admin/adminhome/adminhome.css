@@ -3,7 +3,7 @@
   }
   
   .admin-sidebar {
-    flex: 0 0 30%; /* Sidebar takes 30% of the container */
+    flex: 0 0 20%; /* Sidebar takes 30% of the container */
   }
   
   .admin-body {
