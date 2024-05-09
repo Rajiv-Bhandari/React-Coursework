@@ -61,10 +61,10 @@
     height:100%;
     float:left;
 }
-.commenterImage img {
-    width:100%;
-    border-radius:50%;
+.commenterImage i {
+    color: var(--clr-turquoise);
 }
+    
 .commentText p {
     margin:0;
 }
@@ -76,4 +76,15 @@
 .actionBox {
     border-top:1px dotted #bbb;
     padding:10px;
+}
+.likeIcon i{
+    color: white;
+}
+.likeIcon i:hover{
+    color: red;
+    transition: all 0.3s linear;
+}
+.commentReply p:hover{
+    color: var(--clr-turquoise);
+    transition: all 0.3s linear;
 }
