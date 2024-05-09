@@ -1,19 +1,27 @@
 :root {
     --clr-narvik:#EAE7DD;
     --clr-Sorrellbrown: #99775C;
+    --clr-classicblue: #0A1828;
+    --clr-turquoise: #178582;
+    --clr-gold: #BFA181;
+
+    
+}
+body{
+    background-color: var(--clr-classicblue);
 }
 
 
 .top{
     width: 100%;
     height: 50px;
-    background-color: white;
+    /* background-color: white; */
     position: sticky;
     top: 0;
     display: flex;
     align-items: center;
     font-family: 'Josefin Sans', sans-serif;
-    background-color: var(--clr-narvik);
+    background-color: var(--clr-classicblue);
 }
 
 .topLeft,.topRight{
@@ -46,7 +54,7 @@
     list-style: none;
 }
 .topList a{
-    color: var(--clr-Sorrellbrown);
+    color: var(--clr-turquoise);
 }
 
 .topListItem{
