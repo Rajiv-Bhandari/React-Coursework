@@ -26,6 +26,12 @@ export default function AdminSidebar() {
               Popular Blogs
             </Link>
           </li>
+          <li>
+            <Link to="/admin/users">
+            <i class="fa fa-user" aria-hidden="true"></i>
+              Users
+            </Link>
+          </li>
         </ul>
       </div>
     </div>

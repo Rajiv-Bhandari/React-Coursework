@@ -11,6 +11,7 @@ import Contact from "./components/contact/contact";
 import AdminHome from "./components/admin/adminhome/adminhome";
 import AdminDashboard from "./components/admin/adminhome/admindashboard";
 import AdminPopularBlogs from "./components/admin/adminhome/adminpopularblogs";
+import Adminuserslist from "./components/admin/adminhome/adminuserlist";
 import AddPostButton from "./components/posts/addpostbutton";
 
 import Profile from './components/profile/Profile';
@@ -41,6 +42,7 @@ function App() {
         <Route path="/admin/createadmin" element={<AdminHome />} />
         <Route path="/admin/dashboard" element={<AdminDashboard />} />  
         <Route path="/admin/popularblogs" element={<AdminPopularBlogs />} />
+        <Route path="/admin/users" element={<Adminuserslist />} />
       </Routes>
       <ToastContainer />
     </Router>
