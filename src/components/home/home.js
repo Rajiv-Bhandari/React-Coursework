@@ -15,7 +15,6 @@ export default function home() {
       <div className="home">
         <Post />
         <Sidebar />
-        <AdminSidebar />
         <Contact />
         <Footer />
       </div>
