@@ -1,0 +1,12 @@
+.admin-home {
+    display: flex;
+  }
+  
+  .admin-sidebar {
+    flex: 0 0 30%; /* Sidebar takes 30% of the container */
+  }
+  
+  .admin-body {
+    flex: 1; /* Body takes remaining space */
+  }
+  
