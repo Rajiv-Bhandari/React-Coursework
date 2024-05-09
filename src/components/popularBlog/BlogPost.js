@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 function BlogPost({ blog }) {
   return (
@@ -7,9 +8,7 @@ function BlogPost({ blog }) {
       <p>Author: {blog.author}</p>
       <p>Date: {blog.date}</p>
       <p>{blog.excerpt}</p>
-      <a href={blog.url} target="_blank" rel="noopener noreferrer">
-        Read more
-      </a>
+      <Link to={`/post/details/`}>Read more</Link>
     </div>
   );
 }

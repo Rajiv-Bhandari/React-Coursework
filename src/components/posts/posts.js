@@ -120,7 +120,7 @@ function Post() {
               <p>Author: {blog.author}</p>
               <p>{blog.content}</p>
               <div className="blog-footer">
-                <Link to={`/blog/${blog.id}`} className="read-more">
+                <Link to={`/post/details/`} className="read-more">
                   Read More
                 </Link>
                 <span
@@ -142,7 +142,7 @@ function Post() {
               <p>Author: {blog.author}</p>
               <p>{blog.content}</p>
               <div className="blog-footer">
-                <Link to={`/blog/${blog.id}`} className="read-more">
+                <Link to={`/post/details/`} className="read-more">
                   Read More
                 </Link>
                 <span
@@ -165,7 +165,7 @@ function Post() {
               <p>Author: {blog.author}</p>
               <p>{blog.content}</p>
               <div className="blog-footer">
-                <Link to={`/blog/${blog.id}`} className="read-more">
+               <Link to={`/post/details/`} className="read-more">
                   Read More
                 </Link>
                 <span

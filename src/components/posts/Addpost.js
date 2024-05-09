@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import './addpost.css';
 import Footer from "../footer/footer";
+import { toast, ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const categories = ['Life', 'Music', 'Style', 'Sport', 'Tech', 'Cinema', 'Romance'];
 
@@ -45,6 +47,7 @@ export default function AddPost() {
   
       if (response.ok) {
         console.log('Post created successfully!');
+        toast.success('Post created successfully');
         // Optionally, you can reset the form fields after successful submission
         setTitle('');
         setImage('');
@@ -52,9 +55,11 @@ export default function AddPost() {
         setSelectedCategory(categories[0]);
       } else {
         console.error('Failed to create post.');
+        toast.error('Failed to create post from backend');
       }
     } catch (error) {
       console.error('Error:', error);
+      toast.error('Failed to create post');
     }
   };
   
@@ -84,6 +89,7 @@ export default function AddPost() {
       </form>
     </div>
     <Footer/>
+    <ToastContainer />
     </>
   );
 }
