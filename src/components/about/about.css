@@ -1,14 +1,26 @@
-.about-container {
+/* .about-container {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100%;
+  } */
+  :root {
+    --clr-narvik:#EAE7DD;
+    --clr-Sorrellbrown: #99775C;
+    --clr-classicblue: #0A1828;
+    --clr-turquoise: #178582;
+    --clr-gold: #BFA181;
+    --clr-grey: #6c808e;
+  } 
+  body{
+    background-color: var(--clr-classicblue) !important;
+    color: var(--clr-grey);
   }
   
   .about-content {
-    max-width: 600px;
+    /* max-width: 600px; */
     padding: 20px;
-    background-color: #f9f9f9;
+    /* background-color: #f9f9f9; */
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   }
@@ -16,8 +28,12 @@
   .about-content h2 {
     font-size: 24px;
     margin-bottom: 10px;
+    text-align: center;
+    color: var(--clr-turquoise);
   }
-  
+  .about-content h3 {
+  color: var(--clr-turquoise);}
+
   .about-content p {
     font-size: 16px;
     line-height: 1.6;
@@ -33,4 +49,54 @@
     line-height: 1.6;
     margin-bottom: 5px;
   }
+  .roam-circle{
+    position: absolute;
+    top: 60px;
+    right: 500px;
+
+   }
+   .circle1 {
+    position: absolute;
+    top: 150px;
+    width: 627px;
+    height: 627px;
+    border: 1px solid #deb992;
+    border-radius: 98%;
+    transform-origin: 40% 50% 0;
+    animation-name: spin;
+    animation-duration: 5s;
+    animation-delay: 2s;
+    animation-iteration-count: infinite;
+    animation: spin 15s linear 0s infinite reverse;
+}
+.circle2 {
+  position: absolute;
+  top: 340px;
+  margin-right: 130px;
+  width: 440px;
+  height: 440px;
+  border: 1px solid #deb992;
+  border-radius: 98%;
+  transform-origin: 30% 40% 0;
+  animation: spin 15s linear 0s infinite;
+}
+.circle3 {
+  position: absolute;
+  top: 250px;
+  width: 406px;
+  height: 406px;
+  border: 1px solid #deb992;
+  border-radius: 98%;
+  transform-origin: 75% 50% 0;
+  animation: spin 15s linear 0s infinite;
+
+}
+@keyframes spin {
+  0% {transform: rotate(360deg);
+  }
+}
+  
+  
+  
+  
   

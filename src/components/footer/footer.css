@@ -27,3 +27,10 @@ footer {
   .footer-links{
     display: inline-block;
   }
+  .footer-links a{
+    color: var(--clr-gold);
+  }
+  .footer-links a:hover{
+    color: var(--clr-turquoise);
+    transition: all 0.3s linear;
+  }

@@ -3,7 +3,7 @@ import './about.css';
 
 export default function About() {
   return (
-    <div className="about-container">
+    <div className="container">
       <div className="about-content">
         <h2>Welcome to Our Social Platform</h2>
         <p>At our social platform, we strive to create a vibrant community where users can connect, share ideas, and engage with each other through blogs, discussions, and more.</p>
@@ -29,6 +29,13 @@ export default function About() {
           <li>Stay Informed: Stay up-to-date with the latest trends, news, and discussions happening within your community and beyond.</li>
         </ul>
       </div>
+      <div class="roam-circle">
+        <div class="circle1"></div>
+        <div class="circle2"></div>
+        <div class="circle3"></div>
+    
+    </div>
+
     </div>
   );
 }

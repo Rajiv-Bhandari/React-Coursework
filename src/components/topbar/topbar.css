@@ -4,6 +4,8 @@
     --clr-classicblue: #0A1828;
     --clr-turquoise: #178582;
     --clr-gold: #BFA181;
+    --clr-grey: #6c808e;
+
 
     
 }
@@ -22,6 +24,7 @@ body{
     align-items: center;
     font-family: 'Josefin Sans', sans-serif;
     background-color: var(--clr-classicblue);
+    border-bottom: 1px solid var(--clr-gold);
 }
 
 .topLeft,.topRight{
@@ -54,14 +57,14 @@ body{
     list-style: none;
 }
 .topList a{
-    color: var(--clr-turquoise);
+    color: var(--clr-gold);
 }
 .topList a:hover{
-    color: var(--clr-gold);
+    color: var(--clr-turquoise);
     transition: all 0.3s linear;
 }
 .topList a:active{
-    color: var(--clr-gold) !important;
+    color: var(--clr-turquoise) !important;
 }
 
 .topListItem{
@@ -80,6 +83,9 @@ body{
 .topRight{
     display: flex;
     align-items: center;
+}
+.logOut li{
+    list-style: none;
 }
 .profileMenu {
     position: absolute;
@@ -100,4 +106,17 @@ body{
 
 .profileMenuItem:hover {
     background-color: #9cbcd9;
+}
+.topRight a{
+    color: var(--clr-gold);
+    
+    
+}
+
+.topRight a:hover{
+    color: var(--clr-turquoise);
+    transition: all 0.3s linear;
+}
+.profileIcon i{
+    color: var(--clr-gold);
 }
