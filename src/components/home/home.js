@@ -4,7 +4,7 @@ import Post from "../posts/posts";
 import Sidebar from "../sidebar/sidebar";
 import AdminSidebar from "../admin/adminsidebar/adminSidebar";
 import "./home.css";
-import Contact from "../../contact/contact";
+import Contact from "../contact/contact";
 
 export default function home() {
   return (
@@ -13,8 +13,8 @@ export default function home() {
       <div className="home">
         <Post />
         <Sidebar />
-        <AdminSidebar />
-        <Contact />
+        {/* <AdminSidebar /> */}
+        {/* <Contact /> */}
       </div>
       <Footer />
     </>

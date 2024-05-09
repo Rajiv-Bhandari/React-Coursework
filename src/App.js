@@ -5,6 +5,7 @@ import About from './components/about/About';
 import Blog from "./components/posts/posts"
 import Singlepost from "./components/singlePost/singlepost"; 
 import LoginSignup from "./components/loginsignup/loginsignup"; 
+import Contact from "./components/contact/contact"; 
 // import AdminSidebar from "./components/adminsidebar/AdminSidebar";
 import AdminHome from "./components/admin/adminhome/adminhome";
 
@@ -24,7 +25,7 @@ function App() {
         <Route path="/loginsignup" element={<LoginSignup />} />
         <Route path="/post/singlePOST" element={<Singlepost />} /> 
 
-
+        <Route path="/contact" element={<Contact />} />
         <Route path="/profile" element={<Profile />} />
         <Route path="/changepassword" element={<Changepassword />} />
         <Route path="/admin" element={<AdminHome />} /> 
