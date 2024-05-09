@@ -1,6 +1,7 @@
 import "./posts.css";
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import Sidebar from "../sidebar/sidebar";
 
 const initialMusicBlogs = [
   {
@@ -108,74 +109,76 @@ function Post() {
   };
 
   return (
-    <div>
-      <div className="post-container">
-        <h2>Music Blogs</h2>
-        {musicBlogs.map((blog) => (
-          <div key={blog.id} className="blog">
-            <h4>{blog.title}</h4>
-            <p>Author: {blog.author}</p>
-            <p>{blog.content}</p>
-            <div className="blog-footer">
-              <Link to={`/blog/${blog.id}`} className="read-more">
-                Read More
-              </Link>
-              <span
-                className={`heart-icon ${blog.liked ? "liked" : ""}`}
-                onClick={() => handleLike(blog.id, "music")}
-              >
-                &#9829;
-              </span>
+    <>
+      <div>
+        <div className="post-container">
+          <h2>Music Blogs</h2>
+          {musicBlogs.map((blog) => (
+            <div key={blog.id} className="blog">
+              <h4>{blog.title}</h4>
+              <p>Author: {blog.author}</p>
+              <p>{blog.content}</p>
+              <div className="blog-footer">
+                <Link to={`/blog/${blog.id}`} className="read-more">
+                  Read More
+                </Link>
+                <span
+                  className={`heart-icon ${blog.liked ? "liked" : ""}`}
+                  onClick={() => handleLike(blog.id, "music")}
+                >
+                  &#9829;
+                </span>
+              </div>
             </div>
-          </div>
-        ))}
-      </div>
+          ))}
+        </div>
 
-      <div className="post-container">
-        <h2>Movie Blogs</h2>
-        {movieBlogs.map((blog) => (
-          <div key={blog.id} className="blog">
-            <h4>{blog.title}</h4>
-            <p>Author: {blog.author}</p>
-            <p>{blog.content}</p>
-            <div className="blog-footer">
-              <Link to={`/blog/${blog.id}`} className="read-more">
-                Read More
-              </Link>
-              <span
-                className={`heart-icon ${blog.liked ? "liked" : ""}`}
-                onClick={() => handleLike(blog.id, "movies")}
-              >
-                &#9829;
-              </span>
+        <div className="post-container">
+          <h2>Movie Blogs</h2>
+          {movieBlogs.map((blog) => (
+            <div key={blog.id} className="blog">
+              <h4>{blog.title}</h4>
+              <p>Author: {blog.author}</p>
+              <p>{blog.content}</p>
+              <div className="blog-footer">
+                <Link to={`/blog/${blog.id}`} className="read-more">
+                  Read More
+                </Link>
+                <span
+                  className={`heart-icon ${blog.liked ? "liked" : ""}`}
+                  onClick={() => handleLike(blog.id, "movies")}
+                >
+                  &#9829;
+                </span>
+              </div>
             </div>
-          </div>
-        ))}
-      </div>
+          ))}
+        </div>
 
-      <div className="post-container">
-        <h2>Tech Blogs</h2>
+        <div className="post-container">
+          <h2>Tech Blogs</h2>
 
-        {techBlogs.map((blog) => (
-          <div key={blog.id} className="blog">
-            <h4>{blog.title}</h4>
-            <p>Author: {blog.author}</p>
-            <p>{blog.content}</p>
-            <div className="blog-footer">
-              <Link to={`/blog/${blog.id}`} className="read-more">
-                Read More
-              </Link>
-              <span
-                className={`heart-icon ${blog.liked ? "liked" : ""}`}
-                onClick={() => handleLike(blog.id, "tech")}
-              >
-                &#9829;
-              </span>
+          {techBlogs.map((blog) => (
+            <div key={blog.id} className="blog">
+              <h4>{blog.title}</h4>
+              <p>Author: {blog.author}</p>
+              <p>{blog.content}</p>
+              <div className="blog-footer">
+                <Link to={`/blog/${blog.id}`} className="read-more">
+                  Read More
+                </Link>
+                <span
+                  className={`heart-icon ${blog.liked ? "liked" : ""}`}
+                  onClick={() => handleLike(blog.id, "tech")}
+                >
+                  &#9829;
+                </span>
+              </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
-    </div>
+    </>
   );
 }
 

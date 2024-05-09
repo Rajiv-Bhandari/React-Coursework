@@ -1,6 +1,6 @@
-import { useState } from 'react';
-import { Link } from 'react-router-dom';
-import './topbar.css';
+import { useState } from "react";
+import { Link } from "react-router-dom";
+import "./topbar.css";
 
 export default function TopBar() {
   const [isProfileMenuOpen, setIsProfileMenuOpen] = useState(false);
@@ -18,9 +18,15 @@ export default function TopBar() {
       </div>
       <div className="topCenter">
         <ul className="topList">
-          <li className="topListItem"><Link to="/">HOME</Link></li>
-          <li className="topListItem"><Link to="/about">ABOUT</Link></li>
-          <li className="topListItem"><Link to="/post">BLOG</Link></li>
+          <li className="topListItem">
+            <Link to="/">HOME</Link>
+          </li>
+          <li className="topListItem">
+            <Link to="/about">ABOUT</Link>
+          </li>
+          <li className="topListItem">
+            <Link to="/blogs">BLOG</Link>
+          </li>
           <li className="topListItem">CONTACT</li>
 
           <li className="topListItem">LOGOUT</li>
@@ -36,8 +42,12 @@ export default function TopBar() {
           {/* Conditionally render profile menu */}
           {isProfileMenuOpen && (
             <div className="profileMenu">
-              <Link to="/profile" className="profileMenuItem">Profile</Link>
-              <Link to="/changepassword" className="profileMenuItem">Change Password</Link>
+              <Link to="/profile" className="profileMenuItem">
+                Profile
+              </Link>
+              <Link to="/changepassword" className="profileMenuItem">
+                Change Password
+              </Link>
             </div>
           )}
         </div>
