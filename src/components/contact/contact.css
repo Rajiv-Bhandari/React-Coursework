@@ -1,3 +1,11 @@
+
+:root {
+  --clr-narvik:#EAE7DD;
+  --clr-Sorrellbrown: #99775C;
+  --clr-classicblue: #0A1828;
+  --clr-turquoise: #178582;
+  --clr-gold: #BFA181;
+} 
 .contactform-content{
     margin: 30px 0;
   }
@@ -92,25 +100,65 @@
     background-color:rgba(207, 202, 202, 0.1);
   }
   
-  .form-btn button{
-    padding:9px 20px;
-    border-radius: 15px;
-    border: none;
-    background-color: var(--clr-lightpurple);
-    box-shadow: 0 10px 50px var(--clr-purple);
+
+   .form-btn button{
+    border: 1px solid var(--clr-gold);
+    background-color: var(--clr-gold);
+    color: var(--clr-turquoise);
+
+   }
+   .form-btn button:hover {
+    border: 1px solid var(--clr-turquoise);
+    background-color: var(--clr-turquoise);
+    color: var(--clr-gold);
     transition: all 0.3s linear;
+    box-shadow: 0 10px 50px var(--clr-gold);
+   }
+  .roam-circle{
+    position: absolute;
+
+   }
+   .circle1 {
+    position: absolute;
+    top: 150px;
+    margin-left: -180px;
+    width: 627px;
+    height: 627px;
+    border: 1px solid #deb992;
+    border-radius: 98%;
+    transform-origin: 40% 50% 0;
+    animation-name: spin;
+    animation-duration: 5s;
+    animation-delay: 2s;
+    animation-iteration-count: infinite;
+    animation: spin 15s linear 0s infinite reverse;
+}
+.circle2 {
+  position: absolute;
+  top: 340px;
+  margin-right: 130px;
+  width: 440px;
+  height: 440px;
+  border: 1px solid #deb992;
+  border-radius: 98%;
+  transform-origin: 30% 40% 0;
+  animation: spin 15s linear 0s infinite;
+}
+.circle3 {
+  position: absolute;
+  top: 250px;
+  width: 406px;
+  height: 406px;
+  border: 1px solid #deb992;
+  border-radius: 98%;
+  transform-origin: 75% 50% 0;
+  animation: spin 15s linear 0s infinite;
+
+}
+@keyframes spin {
+  0% {transform: rotate(360deg);
   }
-  .form-btn a{
-    color: var(--clr-purple);
-    text-decoration: none;
-  }
-  .form-btn i{
-    color: var(--clr-purple);
-  }
-  .form-btn button:hover{
-    background-color:var(--clr-lightblue);
-    box-shadow: 0 10px 50px var(--clr-lightblue)
-  }
+}
   
   
   

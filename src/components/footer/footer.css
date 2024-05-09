@@ -1,8 +1,16 @@
 /* Footer.css */
+:root {
+  --clr-narvik:#EAE7DD;
+  --clr-Sorrellbrown: #99775C;
+  --clr-classicblue: #0A1828;
+  --clr-turquoise: #178582;
+  --clr-gold: #BFA181;
+}
+
 
 footer {
-    background-color: #333; /* Background color of the footer */
-    color: #fff; /* Text color */
+    background-color: var(--clr-classicblue); /* Background color of the footer */
+    color: var(--clr-gold); /* Text color */
     padding: 20px 0; /* Padding at the top and bottom */
     text-align: center; /* Center-align the text */
   }
@@ -11,3 +19,18 @@ footer {
     margin: 0; /* Remove default margin */
   }
   
+  .footer-links li{
+    list-style: none;
+    margin-bottom: 6px;
+  
+  }
+  .footer-links{
+    display: inline-block;
+  }
+  .footer-links a{
+    color: var(--clr-gold);
+  }
+  .footer-links a:hover{
+    color: var(--clr-turquoise);
+    transition: all 0.3s linear;
+  }

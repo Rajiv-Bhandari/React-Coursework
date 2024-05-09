@@ -33,13 +33,15 @@ export default function TopBar() {
           <li className="topListItem"><Link to="/admin/dashboard">ADMIN</Link></li>
         </ul>
       </div>
-      <div className="topRight">
+      <div className="topRight ">
         <div className="profileIcon" onClick={handleProfileClick}>
-          <img
+        <i class="fa fa-user-o fa-2x" aria-hidden="true"></i>
+
+          {/* <img
             className="topImg"
             src="https://www.seekpng.com/png/detail/966-9665493_my-profile-icon-blank-profile-image-circle.png"
             alt=""
-          />
+          /> */}
           {/* Conditionally render profile menu */}
           {isProfileMenuOpen && (
             <div className="profileMenu">
@@ -53,6 +55,14 @@ export default function TopBar() {
           )}
         </div>
         <i className="topSearchIcon fa-solid fa-magnifying-glass"></i>
+        <ul className="mb-0 logOut">
+        <li className="topListItem">
+           <Link to="/loginsignup"><i class="fa fa-sign-out" aria-hidden="true"></i>
+          LOGOUT</Link>
+        </li>
+
+        </ul>
+
       </div>
     </div>
   );
