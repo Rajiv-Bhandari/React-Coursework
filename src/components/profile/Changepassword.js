@@ -20,31 +20,31 @@ export default function ChangePassword() {
       return;
     }
 
-    // try {
-    //   const response = await fetch('your_change_password_api_endpoint', {
-    //     method: 'POST',
-    //     headers: {
-    //       'Content-Type': 'application/json',
-    //       // Add any additional headers if required
-    //     },
-    //     body: JSON.stringify({
-    //       previousPassword,
-    //       newPassword,
-    //     }),
-    //   });
+    try {
+      const response = await fetch('https://localhost:7186/api/changepassword', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          // Add any additional headers if required
+        },
+        body: JSON.stringify({
+          previousPassword,
+          newPassword,
+        }),
+      });
 
-    //   const data = await response.json();
+      const data = await response.json();
 
-    //   // Check if the request was successful
-    //   if (response.ok) {
-    //     setMessage("Password changed successfully");
-    //   } else {
-    //     setMessage(data.error || "Failed to change password");
-    //   }
-    // } catch (error) {
-    //   setMessage("An error occurred. Please try again later.");
-    //   console.error('Error:', error);
-    // }
+      // Check if the request was successful
+      if (response.ok) {
+        setMessage("Password changed successfully");
+      } else {
+        setMessage(data.error || "Failed to change password");
+      }
+    } catch (error) {
+      setMessage("An error occurred. Please try again later.");
+      console.error('Error:', error);
+    }
   };
 
   return (
