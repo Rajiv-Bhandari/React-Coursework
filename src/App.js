@@ -28,7 +28,7 @@ function App() {
         <Route path="/post" element={<Blog />} />
         <Route path="/addpost" element={<AddPost />} />
         <Route path="/loginsignup" element={<LoginSignup />} />
-        <Route path="/post/singlePOST" element={<Singlepost />} /> 
+        <Route path="/post/details" element={<Singlepost />} /> 
         {/* <Route path="/blogs" element={<Blog />} /> */}
         <Route path="/blogs" element={<NewBlog />} />
         <Route path="/contact" element={<Contact />} />
