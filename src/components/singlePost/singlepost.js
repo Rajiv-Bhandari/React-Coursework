@@ -13,9 +13,9 @@ export default function singlepost() {
           <div >
                 <img src="https://img.freepik.com/free-photo/painting-mountain-lake-with-mountain-background_188544-9126.jpg?t=st=1715174753~exp=1715178353~hmac=154409cdeabb627619eb694fdac90d51b415da63650e5dd0ee975ae597de8bcf&w=1060" alt="blog-img" width="100%" className="rounded-2"/>
           </div>
-          <p class= "text-center mt-2 fw-bold">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Error officiis dolo
-          </p>
+          <h4 class= "text-center mt-2 fw-bold">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          </h4>
           <div className="d-flex justify-content-between my-2">
             <div>
               Author: Ritiks
