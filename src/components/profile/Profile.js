@@ -61,5 +61,6 @@ export default function Profile() {
         <button className="updateButton" onClick={handleUpdate}>Update</button>
       </div>
     </div>
+    </>
   );
 }

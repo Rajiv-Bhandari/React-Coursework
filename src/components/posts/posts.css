@@ -1,5 +1,12 @@
 /* Post.css */
-
+:root {
+  --clr-narvik:#EAE7DD;
+  --clr-Sorrellbrown: #99775C;
+  --clr-classicblue: #0A1828;
+  --clr-turquoise: #178582;
+  --clr-gold: #BFA181;
+  --clr-grey: #6c808e;    
+}
 .category-container {
     text-align: center; /* Center-align the category title */
     margin-bottom: 20px;

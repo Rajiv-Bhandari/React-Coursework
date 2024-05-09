@@ -5,7 +5,7 @@ import AdminSidebar from "../admin/adminsidebar/adminSidebar";
 import Footer from "../footer/footer";
 
 import "./home.css";
-import Contact from "../contact/contact";
+// import Contact from "../contact/contact";
 
 
 export default function home() {
@@ -15,7 +15,8 @@ export default function home() {
       <div className="home">
         <Post />
         <Sidebar />
-        <Contact />
+        {/* <Contact /> */}
+        <Footer />
       </div>
     </>
   );

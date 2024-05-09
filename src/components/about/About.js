@@ -1,10 +1,6 @@
 import React from 'react';
 import './about.css';
-<<<<<<< HEAD
-import '../footer/footer';
-=======
 import Footer from "../footer/footer";
->>>>>>> 33590aedf020d166b0ab0268f7aabc7de583caf7
 
 export default function About() {
   return (
