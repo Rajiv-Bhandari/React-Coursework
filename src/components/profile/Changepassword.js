@@ -44,7 +44,10 @@ export default function ChangePassword() {
             onChange={(e) => setConfirmPassword(e.target.value)}
           />
         </div>
+        <div class="submit-btn">
         <button type="submit">Change Password</button>
+
+        </div>
       </form>
     </div>
     <Footer/>
