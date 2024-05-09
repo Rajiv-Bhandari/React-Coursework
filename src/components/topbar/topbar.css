@@ -56,6 +56,13 @@ body{
 .topList a{
     color: var(--clr-turquoise);
 }
+.topList a:hover{
+    color: var(--clr-gold);
+    transition: all 0.3s linear;
+}
+.topList a:active{
+    color: var(--clr-gold) !important;
+}
 
 .topListItem{
     margin-right: 20px;

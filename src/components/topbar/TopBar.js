@@ -29,7 +29,6 @@ export default function TopBar() {
           </li>
           <li className="topListItem"><Link to="/contact">CONTACT</Link></li>
 
-          <li className="topListItem"><Link to="/loginsignup">LOGOUT</Link></li>
           <li className="topListItem"><Link to="/admin/dashboard">ADMIN</Link></li>
         </ul>
       </div>
@@ -53,6 +52,13 @@ export default function TopBar() {
           )}
         </div>
         <i className="topSearchIcon fa-solid fa-magnifying-glass"></i>
+        <ul>
+        <li className="topListItem">
+           <Link to="/loginsignup"><i className="fa-solid fa-right-from-bracket"></i>LOGOUT</Link>
+        </li>
+
+        </ul>
+
       </div>
     </div>
   );
