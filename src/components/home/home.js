@@ -10,6 +10,7 @@ export default function home() {
       <div className="home">
         <Post />
         <Sidebar />
+        <adminSidebar/>
       </div>
     </>
   );
