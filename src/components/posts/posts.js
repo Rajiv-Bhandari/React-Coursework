@@ -154,9 +154,8 @@ function Post() {
       </div>
 
       <div className="post-container">
-        <header>
-          <h2>Tech Blogs</h2>
-        </header>
+        <h2>Tech Blogs</h2>
+
         {techBlogs.map((blog) => (
           <div key={blog.id} className="blog">
             <h4>{blog.title}</h4>
