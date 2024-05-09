@@ -1,8 +1,10 @@
 import React from 'react';
 import './about.css';
+import Footer from "../footer/footer";
 
 export default function About() {
   return (
+    <>
     <div className="container">
       <div className="about-content">
         <h2>Welcome to Our Social Platform</h2>
@@ -37,5 +39,7 @@ export default function About() {
     </div>
 
     </div>
+    <Footer/>
+    </>
   );
 }
