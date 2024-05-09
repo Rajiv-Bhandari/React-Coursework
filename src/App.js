@@ -7,6 +7,7 @@ import Singlepost from "./components/singlePost/singlepost";
 
 import Profile from './components/profile/Profile';
 import Changepassword from './components/profile/Changepassword';
+import AddPost from './components/posts/Addpost';
 
 function App() {
   return (
@@ -16,7 +17,8 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/post" element={<Blog />} />
-        <Route path="/post/singlePost/singlePOST" element={<Singlepost />} /> 
+        <Route path="/addpost" element={<AddPost />} />
+        <Route path="/post/singlePOST" element={<Singlepost />} /> 
 
 
         <Route path="/profile" element={<Profile />} />
