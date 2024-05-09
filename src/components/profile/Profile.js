@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './profile.css';
+import Footer from "../footer/footer";
 
 export default function Profile() {
   // State to store form data
@@ -43,6 +44,7 @@ export default function Profile() {
   };
 
   return (
+    <>
     <div className="profile">
       <h2>Your Details</h2>
       <div className="profileDetails">
@@ -57,5 +59,7 @@ export default function Profile() {
         <button className="updateButton" onClick={handleUpdate}>Update</button>
       </div>
     </div>
+    <Footer/>
+    </>
   );
 }
