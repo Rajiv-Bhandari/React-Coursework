@@ -18,6 +18,9 @@ import Changepassword from './components/profile/Changepassword';
 import AddPost from './components/posts/Addpost';
 import NewBlog from './components/posts/newblog';
 
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 function App() {
   return (
     <Router>
