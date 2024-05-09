@@ -46,7 +46,7 @@ export default function Loginsignup() {
                         <div className="section text-center">
                           <form onSubmit={handleSubmit}>
                             <div className="form-group">
-                              <input type="text" name="name" className="form-style" placeholder="Your Full Name" id="name" autoComplete="off" value={name} onChange={(e) => setName(e.target.value)} />
+                              <input type="text" name="fullName" className="form-style" placeholder="Your Full Name" id="fullName" autoComplete="off" value={fullName} onChange={(e) => setName(e.target.value)} />
                               <i className="input-icon uil uil-user"></i>
                             </div>
                             <div className="form-group mt-2">
