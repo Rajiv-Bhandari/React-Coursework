@@ -38,12 +38,14 @@ export default function ChangePassword() {
       // Check if the request was successful
       if (response.ok) {
         setMessage("Password changed successfully");
+        toast.success('Password changed successfully');
       } else {
         setMessage(data.error || "Failed to change password");
       }
     } catch (error) {
       setMessage("An error occurred. Please try again later.");
       console.error('Error:', error);
+      toast.error('An error occured while changing the password');
     }
   };
 
