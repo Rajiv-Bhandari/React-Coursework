@@ -2,9 +2,11 @@ import React from 'react';
 import AdminSidebar from '../adminsidebar/adminSidebar';
 import AdminBody from './adminbody';
 import './adminhome.css';
+import Footer from "../../footer/footer";
 
 export default function AdminHome() {
   return (
+    <>
     <div className="admin-home">
       <div className="admin-sidebar">
         <AdminSidebar />
@@ -13,5 +15,7 @@ export default function AdminHome() {
         <AdminBody />
       </div>
     </div>
+    <Footer/>
+    </>
   );
 }

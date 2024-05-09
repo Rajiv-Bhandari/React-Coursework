@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import './changepassword.css';
+import Footer from "../footer/footer";
 
 export default function ChangePassword() {
   const [previousPassword, setPreviousPassword] = useState('');
@@ -12,6 +13,7 @@ export default function ChangePassword() {
   };
 
   return (
+    <>
     <div className="changePassword">
       <h2>Change Password</h2>
       <form onSubmit={handleSubmit}>
@@ -45,5 +47,7 @@ export default function ChangePassword() {
         <button type="submit">Change Password</button>
       </form>
     </div>
+    <Footer/>
+    </>
   );
 }

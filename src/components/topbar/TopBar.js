@@ -29,7 +29,7 @@ export default function TopBar() {
           </li>
           <li className="topListItem"><Link to="/contact">CONTACT</Link></li>
 
-          <li className="topListItem"><Link to="/loginsignup">LOGOUT</Link></li>
+          <li className="topListItem"><Link to="/loginsignup">SIGN UP</Link></li>
           <li className="topListItem"><Link to="/admin/dashboard">ADMIN</Link></li>
         </ul>
       </div>
@@ -57,7 +57,7 @@ export default function TopBar() {
         <i className="topSearchIcon fa-solid fa-magnifying-glass"></i>
         <ul className="mb-0 logOut">
         <li className="topListItem">
-           <Link to="/loginsignup"><i class="fa fa-sign-out" aria-hidden="true"></i>
+           <Link to="/login"><i class="fa fa-sign-out" aria-hidden="true"></i>
           LOGOUT</Link>
         </li>
 

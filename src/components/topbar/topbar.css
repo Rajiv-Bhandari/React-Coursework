@@ -4,10 +4,7 @@
     --clr-classicblue: #0A1828;
     --clr-turquoise: #178582;
     --clr-gold: #BFA181;
-    --clr-grey: #6c808e;
-
-
-    
+    --clr-grey: #6c808e;    
 }
 body{
     background-color: var(--clr-classicblue);

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './addpost.css';
+import Footer from "../footer/footer";
 
 const categories = ['Life', 'Music', 'Style', 'Sport', 'Tech', 'Cinema', 'Romance'];
 
@@ -59,6 +60,7 @@ export default function AddPost() {
   
 
   return (
+    <>
     <div className="add-post-container">
       <h2>Add Post</h2>
       <form onSubmit={handleSubmit}>
@@ -81,5 +83,7 @@ export default function AddPost() {
         <button type="submit">Submit</button>
       </form>
     </div>
+    <Footer/>
+    </>
   );
 }
