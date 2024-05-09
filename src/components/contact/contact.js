@@ -1,8 +1,9 @@
 import "./contact.css";
+import Footer from "../footer/footer";
 
 export default function contact() {
   return (
-   
+   <>
     <div className='container'>
     <div class="roam-circle">
         <div class="circle1"></div>
@@ -37,6 +38,7 @@ export default function contact() {
             </div>
         </div>
     </div>
-     
+    <Footer/>
+    </>
   )
 }
