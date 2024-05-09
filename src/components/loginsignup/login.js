@@ -22,6 +22,7 @@ export default function Login() {
 
       if (!response.ok) {
         throw new Error('Failed to login');
+        toast.error('Incorrect Email or Password!');
       }
 
       console.log('Login successful');

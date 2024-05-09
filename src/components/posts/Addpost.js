@@ -55,7 +55,7 @@ export default function AddPost() {
         setSelectedCategory(categories[0]);
       } else {
         console.error('Failed to create post.');
-        toast.error('Failed to create post');
+        toast.error('Failed to create post from backend');
       }
     } catch (error) {
       console.error('Error:', error);
