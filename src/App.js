@@ -14,7 +14,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/post" element={<Blog />} />
-        <Route path="/post/:id" element={<Singlepost />} /> {/* Corrected route for single blog post */}
+        <Route path="/post/singlePost/singlePOST" element={<Singlepost />} /> 
 
 
       </Routes>
