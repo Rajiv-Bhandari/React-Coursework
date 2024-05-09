@@ -22,7 +22,6 @@ export default function TopBar() {
           <li className="topListItem"><Link to="/about">ABOUT</Link></li>
           <li className="topListItem"><Link to="/post">BLOG</Link></li>
           <li className="topListItem">CONTACT</li>
-          <li className="topListItem"><Link to="/adminsidebar">AdminPanel</Link></li>
 
           <li className="topListItem">LOGOUT</li>
         </ul>
