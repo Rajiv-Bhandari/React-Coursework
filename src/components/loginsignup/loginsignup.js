@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import "./loginsignup.css";
 
 export default function Loginsignup() {
+  const [fullName, setName] = useState("");
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
 
@@ -9,20 +10,20 @@ export default function Loginsignup() {
     e.preventDefault();
 
     try {
-      const response = await fetch("https://localhost:7186/api/Auth/Login", {
+      const response = await fetch("https://localhost:7186/api/Auth/Register", {
         method: "POST",
         headers: {
           "Content-Type": "application/json"
         },
-        body: JSON.stringify({ username, password })
+        body: JSON.stringify({ fullName, username, password })
       });
 
       if (!response.ok) {
-        throw new Error('Failed to login');
+        throw new Error('Failed to register');
       }
 
-      throw new Error('login successful');
-      // Handle successful login, such as redirecting the user or storing authentication token
+      console.log('Registration successful');
+      // Handle successful registration, such as redirecting the user or displaying a success message
     } catch (error) {
       console.error('Error:', error);
     }
@@ -35,7 +36,7 @@ export default function Loginsignup() {
           <div className="row full-height justify-content-center">
             <div className="col-12 text-center align-self-center py-5">
               <div className="section pb-5 pt-5 pt-sm-2 text-center">
-                <h6 className="mb-0 pb-3"><span>Log In </span><span>Sign Up</span></h6>
+                <h6 className="mb-0 pb-3">Sign Up</h6>
                 <input className="checkbox" type="checkbox" id="reg-log" name="reg-log"/>
                 <label htmlFor="reg-log"></label>
                 <div className="card-3d-wrap mx-auto">
@@ -43,23 +44,24 @@ export default function Loginsignup() {
                     <div className="card-front">
                       <div className="center-wrap">
                         <div className="section text-center">
-                          <h4 className="mb-4 pb-3">Log In</h4>
                           <form onSubmit={handleSubmit}>
                             <div className="form-group">
-                              <input type="email" name="logemail" className="form-style" placeholder="Your UserName" id="logemail" autoComplete="off" value={username} onChange={(e) => setUsername(e.target.value)} />
-                              <i className=""></i>
+                              <input type="text" name="name" className="form-style" placeholder="Your Full Name" id="name" autoComplete="off" value={name} onChange={(e) => setName(e.target.value)} />
+                              <i className="input-icon uil uil-user"></i>
                             </div>
                             <div className="form-group mt-2">
-                              <input type="password" name="logpass" className="form-style" placeholder="Your Password" id="logpass" autoComplete="off" value={password} onChange={(e) => setPassword(e.target.value)} />
+                              <input type="email" name="username" className="form-style" placeholder="Your UserName" id="username" autoComplete="off" value={username} onChange={(e) => setUsername(e.target.value)} />
+                              <i className="input-icon uil uil-at"></i>
+                            </div>
+                            <div className="form-group mt-2">
+                              <input type="password" name="password" className="form-style" placeholder="Your Password" id="password" autoComplete="off" value={password} onChange={(e) => setPassword(e.target.value)} />
                               <i className="input-icon uil uil-lock-alt"></i>
                             </div>
-                            <button type="submit" className="btn mt-4">submit</button>
+                            <button type="submit" className="btn mt-4">Submit</button>
                           </form>
-                          <p className="mb-0 mt-4 text-center"><a href="#0" className="link">Forgot your password?</a></p>
                         </div>
                       </div>
                     </div>
-                    {/* Sign Up card */}
                   </div>
                 </div>
               </div>
