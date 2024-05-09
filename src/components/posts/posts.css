@@ -105,7 +105,7 @@
     background-color: var(--clr-blue);
     box-shadow: 0 10px 50px var(--clr-gold);
     text-decoration: none;
-    transform:  all 0.3s linear;
+    transition: all 0.3s linear;
     
   }
   .read-more a:hover{
