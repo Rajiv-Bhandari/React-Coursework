@@ -1,0 +1,26 @@
+.dashboard-container {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+  }
+  
+  .dashboard-item {
+    width: 150px;
+    background-color: #f0f0f0;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .dashboard-item h3 {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+  
+  .dashboard-item .number {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+  }
+  

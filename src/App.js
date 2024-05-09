@@ -8,6 +8,7 @@ import LoginSignup from "./components/loginsignup/loginsignup";
 import Contact from "./components/contact/contact"; 
 // import AdminSidebar from "./components/adminsidebar/AdminSidebar";
 import AdminHome from "./components/admin/adminhome/adminhome";
+import AdminDashboard from "./components/admin/adminhome/admindashboard";
 import AddPostButton from "./components/posts/addpostbutton";
 
 import Profile from './components/profile/Profile';
@@ -31,8 +32,8 @@ function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/profile" element={<Profile />} />
         <Route path="/changepassword" element={<Changepassword />} />
-        <Route path="/admin" element={<AdminHome />} /> 
-
+        <Route path="/createadmin" element={<AdminHome />} />
+        <Route path="/admindashboard" element={<AdminDashboard />} /> 
       </Routes>
     </Router>
   );
