@@ -197,14 +197,18 @@ function Post() {
 
   useEffect(() => {
     fetch("https://localhost:7186/api/post/get-all-post")
-      .then((response) => response.json())
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error('Failed to fetch');
+        }
+        return response.json();
+      })
       .then((data) => setPosts(data))
-      .catch((error) => toast.error('Failed to fetch from API!'));
+      .catch((error) => {
+        toast.error('Failed to fetch from API!');
+        console.error('Error fetching posts:', error);
+      });
   }, []);
-
-  const handleLike = (postId) => {
-    // Implement like functionality if needed
-  };
 
   return (
     <div>
@@ -228,4 +232,3 @@ function Post() {
 }
 
 export default Post;
-
