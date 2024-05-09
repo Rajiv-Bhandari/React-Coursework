@@ -1,9 +1,9 @@
 import Header from "../header/Header";
 import Post from "../posts/posts";
 import Sidebar from "../sidebar/sidebar";
-import AdminSidebar from "../adminsidebar/AdminSidebar";
+import AdminSidebar from "../admin/adminsidebar/adminSidebar";
 import "./home.css";
-import Contact from "../../contact/contact";
+import Contact from "../contact/contact";
 
 export default function home() {
   return (
