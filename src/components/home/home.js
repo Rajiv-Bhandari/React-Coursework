@@ -2,6 +2,7 @@ import Footer from "../footer/footer";
 import Header from "../header/Header";
 import Post from "../posts/posts";
 import Sidebar from "../sidebar/sidebar";
+import AddPostButton from "../posts/addpostbutton";
 import AdminSidebar from "../admin/adminsidebar/adminSidebar";
 import "./home.css";
 import Contact from "../contact/contact";
@@ -11,6 +12,7 @@ export default function home() {
     <>
       <Header />
       <div className="home">
+      {/* <AddPostButton/> */}
         <Post />
         <Sidebar />
         {/* <AdminSidebar /> */}

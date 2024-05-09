@@ -8,10 +8,12 @@ import LoginSignup from "./components/loginsignup/loginsignup";
 import Contact from "./components/contact/contact"; 
 // import AdminSidebar from "./components/adminsidebar/AdminSidebar";
 import AdminHome from "./components/admin/adminhome/adminhome";
+import AddPostButton from "./components/posts/addpostbutton";
 
 import Profile from './components/profile/Profile';
 import Changepassword from './components/profile/Changepassword';
 import AddPost from './components/posts/Addpost';
+import NewBlog from './components/posts/newblog';
 
 function App() {
   return (
@@ -24,7 +26,8 @@ function App() {
         <Route path="/addpost" element={<AddPost />} />
         <Route path="/loginsignup" element={<LoginSignup />} />
         <Route path="/post/singlePOST" element={<Singlepost />} /> 
-
+        {/* <Route path="/blogs" element={<Blog />} /> */}
+        <Route path="/blogs" element={<NewBlog />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/profile" element={<Profile />} />
         <Route path="/changepassword" element={<Changepassword />} />

@@ -5,9 +5,9 @@ import { Link } from "react-router-dom";
 export default function Sidebar() {
   return (
     <div className="sidebar">
-      <Link to="/addpost" className="addPostButton">
+      {/* <Link to="/addpost" className="addPostButton">
         Add Post
-      </Link>
+      </Link> */}
       {/* <div className="sidebarItem">
         <span className="sidebarTitle">CATEGORIES</span>
         <ul className="sidebarList">
