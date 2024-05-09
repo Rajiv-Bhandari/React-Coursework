@@ -19,7 +19,7 @@ export default function Loginsignup() {
                         <div className="section text-center">
                           <h4 className="mb-4 pb-3">Log In</h4>
                           <div className="form-group">
-                            <input type="email" name="logemail" className="form-style" placeholder="Your Email" id="logemail" autoComplete="off"/>
+                            <input type="email" name="logemail" className="form-style" placeholder="Your UserName" id="logemail" autoComplete="off"/>
                             <i className=""></i>
                           </div>
                           <div className="form-group mt-2">
@@ -40,7 +40,7 @@ export default function Loginsignup() {
                             <i className="input-icon uil uil-user"></i>
                           </div>
                           <div className="form-group mt-2">
-                            <input type="email" name="logemail" className="form-style" placeholder="Your Email" id="logemail" autoComplete="off"/>
+                            <input type="email" name="logemail" className="form-style" placeholder="Your UserName" id="logemail" autoComplete="off"/>
                             <i className="input-icon uil uil-at"></i>
                           </div>
                           <div className="form-group mt-2">
