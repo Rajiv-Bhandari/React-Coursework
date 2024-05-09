@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import './changepassword.css';
 import Footer from "../footer/footer";
+import { toast, ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 export default function ChangePassword() {
   const [previousPassword, setPreviousPassword] = useState('');
@@ -14,6 +16,7 @@ export default function ChangePassword() {
     // Check if new password matches confirm password
     if (newPassword !== confirmPassword) {
       setMessage("New password and confirm password do not match");
+      toast.error('New password and confirm password do not match');
       return;
     }
 
