@@ -21,6 +21,8 @@ export default function Loginsignup() {
         throw new Error('Failed to login');
       }
 
+      setLoginMessage("Login successful!");
+      throw new Error('login successful');
       // Handle successful login, such as redirecting the user or storing authentication token
     } catch (error) {
       console.error('Error:', error);
