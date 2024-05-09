@@ -41,8 +41,8 @@ export default function AddPost() {
         <label htmlFor="title">Title:</label>
         <input type="text" id="title" value={title} onChange={handleTitleChange} required />
         
-        <label htmlFor="image">Image URL:</label>
-        <input type="text" id="image" value={image} onChange={handleImageChange} required />
+        <label htmlFor="image">Image:</label>
+        <input type="file" id="image" value={image} onChange={handleImageChange} required />
 
         <label htmlFor="description">Description:</label>
         <textarea id="description" value={description} onChange={handleDescriptionChange} required />
