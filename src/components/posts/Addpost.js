@@ -34,7 +34,7 @@ export default function AddPost() {
     };
   
     try {
-      const response = await fetch('https://localhost:3000/api/post/create-post', {
+      const response = await fetch('https://localhost:7186/api/post/create-post', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
