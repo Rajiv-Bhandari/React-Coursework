@@ -111,12 +111,6 @@
     background-color:var(--clr-lightblue);
     box-shadow: 0 10px 50px var(--clr-lightblue)
   }
-  .form-btn button:hover  a{
-    color: white;
-  }
-  .form-btn button:hover i{
-    color: white;
-  }
   
   
   
