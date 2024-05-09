@@ -48,15 +48,15 @@ export default function Loginsignup() {
                         <div className="section text-center">
                           <form onSubmit={handleSubmit}>
                             <div className="form-group">
-                              <input type="text" name="fullName" className="form-style" placeholder="Your Full Name" id="fullName" autoComplete="off" value={fullName} onChange={(e) => setName(e.target.value)} />
+                              <input type="text" name="fullName" className="form-style" placeholder=" Full Name" id="fullName" autoComplete="off" value={fullName} onChange={(e) => setName(e.target.value)} />
                               <i className="input-icon uil uil-user"></i>
                             </div>
                             <div className="form-group mt-2">
-                              <input type="email" name="username" className="form-style" placeholder="Your UserName" id="username" autoComplete="off" value={username} onChange={(e) => setUsername(e.target.value)} />
+                              <input type="email" name="username" className="form-style" placeholder=" UserName" id="username" autoComplete="off" value={username} onChange={(e) => setUsername(e.target.value)} />
                               <i className="input-icon uil uil-at"></i>
                             </div>
                             <div className="form-group mt-2">
-                              <input type="password" name="password" className="form-style" placeholder="Your Password" id="password" autoComplete="off" value={password} onChange={(e) => setPassword(e.target.value)} />
+                              <input type="password" name="password" className="form-style" placeholder=" Password" id="password" autoComplete="off" value={password} onChange={(e) => setPassword(e.target.value)} />
                               <i className="input-icon uil uil-lock-alt"></i>
                             </div>
                             <button type="submit" className="btn mt-4">Submit</button>
