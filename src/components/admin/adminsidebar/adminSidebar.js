@@ -9,19 +9,20 @@ export default function AdminSidebar() {
         <ul>
           <li>
             <Link to="/admin/dashboard">
-              <i className="fas fa-pencil-alt"></i> 
+            <i class="fa fa-list" aria-hidden="true"></i>
               Dashboard
             </Link>
           </li>
           <li>
             <Link to="/admin/createadmin">
-              <i className="fas fa-user-plus"></i> 
+            <i class="fa fa-plus-square" aria-hidden="true"></i>
               Create Admin
             </Link>
           </li>
           <li>
             <Link to="/admin/popularblogs">
-              <i className="fas fa-chart-line"></i> 
+            <i class="fa fa-line-chart" aria-hidden="true"></i>
+
               Popular Blogs
             </Link>
           </li>
