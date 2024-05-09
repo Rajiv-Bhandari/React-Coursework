@@ -58,7 +58,7 @@ export default function Profile() {
         </div>
       </div>
         <div className='text-center m-3'>
-        <button className="updateButton" onClick={handleUpdate}>Update</button>
+        <button className="updateButton p-1" onClick={handleUpdate}>Update</button>
       </div>
     </div>
     </>
