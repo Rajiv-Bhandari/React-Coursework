@@ -34,7 +34,7 @@ export default function AddPost() {
     };
   
     try {
-      const response = await fetch('https://localhost:7186/api/post/create-post', {
+      const response = await fetch('https://localhost:3000/api/post/create-post', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
@@ -66,7 +66,7 @@ export default function AddPost() {
         <input type="text" id="title" value={title} onChange={handleTitleChange} required />
         
         <label htmlFor="image">Image:</label>
-        <input type="file" id="image" value={image} onChange={handleImageChange} required />
+        <input type="file" id="image" value={image} onChange={handleImageChange} />
 
         <label htmlFor="description">Description:</label>
         <textarea id="description" value={description} onChange={handleDescriptionChange} required />
