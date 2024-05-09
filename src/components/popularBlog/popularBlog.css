@@ -1,0 +1,52 @@
+/* App.css */
+
+.App {
+    text-align: center;
+    padding: 0 20px; /* Added padding for left and right sides */
+  }
+  
+  header {
+    background-color: #333;
+    color: white;
+    padding: 20px 0;
+  }
+  
+  .blog-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Adjusted */
+    grid-gap: 20px;
+    padding: 20px;
+  }
+  
+  .blog-post {
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+  }
+  
+  .blog-post:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+  a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  @media (min-width: 768px) {
+    .App {
+      padding: 0 50px; /* Adjusted padding for larger screens */
+    }
+    
+    .blog-list {
+      grid-template-columns: repeat(3, 1fr); /* Only 3 cards per row on larger screens */
+    }
+  }
+  

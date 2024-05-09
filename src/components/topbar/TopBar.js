@@ -1,8 +1,14 @@
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import React from 'react';
 import './topbar.css';
 
 export default function TopBar() {
+  const [isProfileMenuOpen, setIsProfileMenuOpen] = useState(false);
+
+  const handleProfileClick = () => {
+    setIsProfileMenuOpen(!isProfileMenuOpen);
+  };
+
   return (
     <div className="top">
       <div className="topLeft">
@@ -21,11 +27,20 @@ export default function TopBar() {
         </ul>
       </div>
       <div className="topRight">
-        <img
-          className="topImg"
-          src="https://www.seekpng.com/png/detail/966-9665493_my-profile-icon-blank-profile-image-circle.png"
-          alt=""
-        />
+        <div className="profileIcon" onClick={handleProfileClick}>
+          <img
+            className="topImg"
+            src="https://www.seekpng.com/png/detail/966-9665493_my-profile-icon-blank-profile-image-circle.png"
+            alt=""
+          />
+          {/* Conditionally render profile menu */}
+          {isProfileMenuOpen && (
+            <div className="profileMenu">
+              <Link to="/profile" className="profileMenuItem">Profile</Link>
+              <Link to="/changepassword" className="profileMenuItem">Change Password</Link>
+            </div>
+          )}
+        </div>
         <i className="topSearchIcon fa-solid fa-magnifying-glass"></i>
       </div>
     </div>
