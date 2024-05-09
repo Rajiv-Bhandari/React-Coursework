@@ -4,7 +4,9 @@
   --clr-classicblue: #0A1828;
   --clr-turquoise: #178582;
   --clr-gold: #BFA181;
-  --clr-grey: #6c808e;    
+  --clr-grey: #6c808e; 
+  --clr-blue: #012033; 
+    --clr-trygrey:#869ba9;   
 }
 
 .admin-sidebar-container {
@@ -27,8 +29,8 @@
   margin-bottom: 30px;
   padding: 5px;
   font-size: 1.5rem;
-  color: #ecf0f1;
-  border-bottom: 2px solid #2980b9;
+  color: var(--clr-narvik);
+  border-bottom: 2px solid var(--clr-turquoise);
   text-align: center;
 }
 
@@ -45,7 +47,7 @@
   display: flex;
   align-items: center;
   text-decoration: none;
-  color: #ecf0f1;
+  color: var(--clr-narvik );
   font-size: 1.1rem;
   transition: color 0.3s;
 }
@@ -55,5 +57,9 @@
 }
 
 .admin-sidebar ul li a:hover {
-  color: #3498db;
+  color: var(--clr-gold);
+  transition: all 0.3s linear;
+}
+.admin-sidebar i{
+  color: var(--clr-turquoise);
 }
