@@ -42,6 +42,7 @@ function App() {
         <Route path="/admin/dashboard" element={<AdminDashboard />} />  
         <Route path="/admin/popularblogs" element={<AdminPopularBlogs />} />
       </Routes>
+      <ToastContainer />
     </Router>
   );
 }
