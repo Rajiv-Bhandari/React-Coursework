@@ -1,5 +1,8 @@
 import React, { useState } from 'react';
 import './profile.css';
+import Footer from "../footer/footer";
+import { toast, ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 export default function Profile() {
   // State to store form data
@@ -31,20 +34,22 @@ export default function Profile() {
     .then(response => {
       if (response.ok) {
         console.log('Profile updated successfully');
-        // You can add any further actions here, like showing a success message
+        toast.success('Post updated successfully');
       } else {
         console.error('Failed to update profile');
-        // Handle error scenarios
+        toast.error('Failed to update profile from backend');
       }
     })
     .catch(error => {
       console.error('Error updating profile:', error);
+      toast.error('Error updating profile');
     });
   };
 
   return (
+    <>
     <div className="profile">
-      <h2>Your Details</h2>
+      <h2 class="my-3">Your Details</h2>
       <div className="profileDetails">
         <div>
           <label htmlFor="fullName">Full Name:</label>
@@ -54,8 +59,11 @@ export default function Profile() {
           <label htmlFor="username">Username:</label>
           <input type="text" id="username" name="username" value={formData.username} onChange={handleInputChange} />
         </div>
-        <button className="updateButton" onClick={handleUpdate}>Update</button>
+      </div>
+        <div className='text-center m-3'>
+        <button className="updateButton p-1" onClick={handleUpdate}>Update</button>
       </div>
     </div>
+    </>
   );
 }

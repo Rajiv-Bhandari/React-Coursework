@@ -1,8 +1,17 @@
+:root {
+  --clr-narvik:#EAE7DD;
+  --clr-Sorrellbrown: #99775C;
+  --clr-classicblue: #0A1828;
+  --clr-turquoise: #178582;
+  --clr-gold: #BFA181;
+  --clr-grey: #6c808e;    
+}
+
 .profile {
     width: 400px;
     margin: 50px auto;
     padding: 20px;
-    background-color: #f9f9f9;
+    background-color: var(--clr-grey);
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   }
@@ -10,6 +19,7 @@
   .profile h2 {
     font-size: 24px;
     margin-bottom: 20px;
+    color: var(--clr-classicblue);
   }
   
   .profileDetails {
@@ -26,18 +36,34 @@
   .profileDetails label {
     font-weight: bold;
     margin-bottom: 5px;
+    color: var(--clr-classicblue);
   }
   
   .profileDetails input {
     padding: 10px;
-    border: 1px solid #ccc;
+    border: 1px solid var(--clr-gold);
     border-radius: 5px;
     font-size: 16px;
+    background-color: var(--clr-grey);
   }
   
   .profileDetails input:focus {
     outline: none;
-    border-color: #007bff;
-    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+    border-color: var(--clr-grey);
+    box-shadow: 0 0 5px var(--clr-classicblue);
   }
-  
+  .updateButton{
+    text-align: center;
+    width:90px;
+    margin: 5px;
+    border-radius: 7px;
+    background-color: var(--clr-classicblue);
+    color: var(--clr-gold);
+  }
+  .updateButton:hover{
+    background-color: var(--clr-Sorrellbrown);
+    color: var(--clr-classicblue);
+    box-shadow: 0 10px 50px var(--clr-gold);
+    transition: all 0.3s linear;
+    border: 1px solid var(--clr-Sorrellbrown);
+  }

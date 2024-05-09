@@ -1,5 +1,9 @@
 import React, { useState } from 'react';
 import './addpost.css';
+import Footer from "../footer/footer";
+import { toast, ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import { useNavigate } from 'react-router-dom';
 
 const categories = ['Life', 'Music', 'Style', 'Sport', 'Tech', 'Cinema', 'Romance'];
 
@@ -8,6 +12,8 @@ export default function AddPost() {
   const [image, setImage] = useState('');
   const [description, setDescription] = useState('');
   const [selectedCategory, setSelectedCategory] = useState(categories[0]);
+
+  const navigate = useNavigate();
 
   const handleTitleChange = (event) => {
     setTitle(event.target.value);
@@ -44,21 +50,26 @@ export default function AddPost() {
   
       if (response.ok) {
         console.log('Post created successfully!');
-        // Optionally, you can reset the form fields after successful submission
-        setTitle('');
-        setImage('');
-        setDescription('');
-        setSelectedCategory(categories[0]);
+        toast.success('Post created successfully');
+        setTimeout(() => {
+          navigate('/blogs');
+        }, 1000); 
       } else {
         console.error('Failed to create post.');
+        toast.error('Failed to create post from backend');
       }
     } catch (error) {
       console.error('Error:', error);
+      toast.error('Failed to create post');
+      setTimeout(() => {
+        navigate('/blogs');
+      }, 1000);    
     }
   };
   
 
   return (
+    <>
     <div className="add-post-container">
       <h2>Add Post</h2>
       <form onSubmit={handleSubmit}>
@@ -81,5 +92,7 @@ export default function AddPost() {
         <button type="submit">Submit</button>
       </form>
     </div>
+    <Footer/>
+    </>
   );
 }

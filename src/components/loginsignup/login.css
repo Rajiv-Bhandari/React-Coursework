@@ -1,10 +1,23 @@
+:root {
+  --clr-narvik:#EAE7DD;
+  --clr-Sorrellbrown: #99775C;
+  --clr-classicblue: #0A1828;
+  --clr-turquoise: #178582;
+  --clr-gold: #BFA181;
+  --clr-grey: #6c808e;
+} 
 .login-container {
     max-width: 400px;
     margin: 0 auto;
+    margin-top: 100px;
+    margin-bottom: 100px;
     padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    background-color: #fff;
+    border: none;
+    border-radius: 6px;
+    background-color: #2a2b38;
+
+
+
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   }
   
@@ -23,18 +36,41 @@
     margin-bottom: 15px;
     border: 1px solid #ccc;
     border-radius: 5px;
+    color: #c4c3ca;
+    border: none;
+    background-color: #1f2029;
+    box-shadow: 0 4px 8px 0 rgba(21, 21, 21, .2)
+  }
+  .login-input:hover {
+    border: 1px soild var(--clr-turquoise);
+    transition: all 0.3s linear;
   }
   
   .login-button {
-    padding: 10px 20px;
-    background-color: #007bff;
-    color: #fff;
+    
+    border-radius: 4px;
+    height: 44px;
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: uppercase;
+    transition: all 200ms linear;
+    padding: 0 30px;
+    letter-spacing: 1px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    -ms-flex-pack: center;
+    text-align: center;
     border: none;
-    border-radius: 5px;
-    cursor: pointer;
+    background-color: var(--clr-turquoise);
+    color: var(--clr-classicblue);
+    box-shadow: 0 8px 24px 0 rgba(18, 248, 173,.2);
   }
   
   .login-button:hover {
-    background-color: #0056b3;
+  background-color: var(--clr-classicblue);
+  color:var(--clr-turquoise);
+  box-shadow: 0 10px 50px var(--clr-turquoise);
+  transition: all 0.3s linear;
   }
   
