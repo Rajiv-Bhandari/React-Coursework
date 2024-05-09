@@ -47,5 +47,11 @@
     background-color: #e74c3c; /* You can change the color */
     border-radius: 5px;
   }
+
+  .chart-container {
+    width: 250px;
+    margin-top: 25px;
+    margin-left: 40px;
+  }
   
  

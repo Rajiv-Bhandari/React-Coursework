@@ -33,19 +33,6 @@ export default function AdminHome() {
               <h3>Total Downvotes</h3>
               <p className="number">100</p>
             </div>
-            {/* Static Chart */}
-            {/* <div className="dashboard-item chart-container">
-              <h3>Static Chart</h3>
-              <div className="chart">
-                <div className="bar" style={{ height: '150px' }}></div>
-                <div className="bar" style={{ height: '100px' }}></div>
-                <div className="bar" style={{ height: '200px' }}></div>
-                <div className="bar" style={{ height: '250px' }}></div>
-                <div className="bar" style={{ height: '180px' }}></div>
-              </div>
-            </div> */}
-            {/* Bar Graph */}
-          
           </div>
           <div className="dashboard-item chart-container">
               <h3>Bar Graph</h3>
