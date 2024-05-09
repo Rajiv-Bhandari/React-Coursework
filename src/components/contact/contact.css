@@ -102,6 +102,8 @@
   
 
    .form-btn button{
+    padding: 9px;
+    border-radius: 7px;
     border: 1px solid var(--clr-gold);
     background-color: var(--clr-gold);
     color: var(--clr-turquoise);
