@@ -12,7 +12,7 @@ function Post() {
       author: "Author 1",
       content: "Content 1",
       liked: false,
-      imageUrl: "https://media.wired.com/photos/6441cc2e6b2fffe52ad78d24/4:3/w_2139,h_1604,c_limit/The-Sludgification-Of-Music-Business-503493283.jpg", 
+      imageUrl: "https://blog.hubspot.com/hs-fs/hubfs/parts-url_1.webp?width=595&height=400&name=parts-url_1.webp", 
     },
     {
       id: 2,
@@ -39,7 +39,7 @@ function Post() {
       author: "Author 1",
       content: "Content 1",
       liked: false,
-      imageUrl: "https://timesofindia.indiatimes.com/photo/90355881.cms", 
+      imageUrl: "https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC/et00384234-ucjanhybzu-portrait.jpg", 
     },
     {
       id: 2,
@@ -55,7 +55,7 @@ function Post() {
       author: "Author 3",
       content: "Content 3",
       liked: false,
-      imageUrl: "https://media.wired.com/photos/6441cc2e6b2fffe52ad78d24/4:3/w_2139,h_1604j,c_limit/The-Sludgification-Of-Music-Business-503493283.jpg", 
+      imageUrl: "https://amc-theatres-res.cloudinary.com/image/upload/f_auto,fl_lossy,h_465,q_auto,w_310/v1709921464/amc-cdn/production/2/movies/70800/70790/PosterDynamic/163689.jpg", 
     },
   ];
   
