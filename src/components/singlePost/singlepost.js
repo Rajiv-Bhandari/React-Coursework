@@ -13,9 +13,9 @@ export default function singlepost() {
           <div >
                 <img src="https://img.freepik.com/free-photo/painting-mountain-lake-with-mountain-background_188544-9126.jpg?t=st=1715174753~exp=1715178353~hmac=154409cdeabb627619eb694fdac90d51b415da63650e5dd0ee975ae597de8bcf&w=1060" alt="blog-img" width="100%" className="rounded-2"/>
           </div>
-          <p class= "text-center mt-2 fw-bold">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Error officiis dolo
-          </p>
+          <h4 class= "text-center mt-2 fw-bold">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          </h4>
           <div className="d-flex justify-content-between my-2">
             <div>
               Author: Ritiks
@@ -45,10 +45,16 @@ export default function singlepost() {
                 </div>
                 <div class="commentText mb-3">
                     <p class="">Hello this is a test comment.</p>
-                    <div class="d-flex justify-content-between">
-                    <p class="date sub-text">on April 6th, 2024</p>
-
-
+                    <div class="mb-2">
+                      <p class="date sub-text">on April 6th, 2024</p>
+                    </div>
+                    <div class="d-flex justify-content-between align-items-center mb-3">
+                    <div class="commentReply">
+                      <p>Reply</p>
+                    </div>
+                      <div class="likeIcon">
+                      <i class="fa fa-heart" aria-hidden="true"></i>
+                      </div>
                     </div>
 
                 </div>
@@ -59,7 +65,18 @@ export default function singlepost() {
 
                 </div>
                 <div class="commentText mb-3">
-                    <p class="">Hello this is a test comment and this comment is particularly very long and it goes on and on and on.</p> <span class="date sub-text">on April 6th, 2024</span>
+                    <p class="">Informative post.Thank You</p> 
+                    <div class="mb-2">
+                      <p class="date sub-text">on April 6th, 2024</p>
+                    </div>
+                    <div class="d-flex justify-content-between align-items-center mb-3">
+                    <div class="commentReply">
+                      <p>Reply</p>
+                    </div>
+                      <div class="likeIcon">
+                      <i class="fa fa-heart" aria-hidden="true"></i>
+                      </div>
+                    </div>
 
                 </div>
             </li>
@@ -69,7 +86,18 @@ export default function singlepost() {
 
                 </div>
                 <div class="commentText mb-3">
-                    <p class="">Hello this is a test comment.</p> <span class="date sub-text">on April 6th, 2024</span>
+                    <p class="">Looking forward </p> 
+                    <div class="mb-2">
+                      <p class="date sub-text">on April 6th, 2024</p>
+                    </div>
+                    <div class="d-flex justify-content-between align-items-center mb-3">
+                    <div class="commentReply">
+                      <p>Reply</p>
+                    </div>
+                      <div class="likeIcon">
+                      <i class="fa fa-heart" aria-hidden="true"></i>
+                      </div>
+                    </div>
                 </div>
             </li>
         </ul>
