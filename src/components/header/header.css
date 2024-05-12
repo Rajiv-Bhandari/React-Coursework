@@ -30,6 +30,12 @@ header h1{
     
 }
 
+.header-image {
+    width: 100%; /* Make the image fill the width of its container */
+    max-height: 200px; /* Set a maximum height to fit within the card */
+    object-fit: cover; /* Ensure the image covers the entire container */
+  }
+  
 .container {
     display: flex;
     flex-wrap: wrap;

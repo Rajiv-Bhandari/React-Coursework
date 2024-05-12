@@ -27,15 +27,21 @@ export default function TopBar() {
           <li className="topListItem">
             <Link to="/blogs">BLOG</Link>
           </li>
-          <li className="topListItem"><Link to="/contact">CONTACT</Link></li>
+          <li className="topListItem">
+            <Link to="/contact">CONTACT</Link>
+          </li>
 
-          <li className="topListItem"><Link to="/loginsignup">SIGN UP</Link></li>
-          <li className="topListItem"><Link to="/admin/dashboard">ADMIN</Link></li>
+          <li className="topListItem">
+            <Link to="/loginsignup">SIGN IN</Link>
+          </li>
+          <li className="topListItem">
+            <Link to="/admin/dashboard">ADMIN</Link>
+          </li>
         </ul>
       </div>
       <div className="topRight ">
         <div className="profileIcon" onClick={handleProfileClick}>
-        <i class="fa fa-user-o fa-2x" aria-hidden="true"></i>
+          <i class="fa fa-user-o fa-2x" aria-hidden="true"></i>
 
           {/* <img
             className="topImg"
@@ -56,13 +62,13 @@ export default function TopBar() {
         </div>
         <i className="topSearchIcon fa-solid fa-magnifying-glass"></i>
         <ul className="mb-0 logOut">
-        <li className="topListItem">
-           <Link to="/login"><i class="fa fa-sign-out" aria-hidden="true"></i>
-          LOGOUT</Link>
-        </li>
-
+          <li className="topListItem">
+            <Link to="/login">
+              <i class="fa fa-sign-out" aria-hidden="true"></i>
+              Logout
+            </Link>
+          </li>
         </ul>
-
       </div>
     </div>
   );
