@@ -32,7 +32,7 @@ export default function TopBar() {
           </li>
 
           <li className="topListItem">
-            <Link to="/loginsignup">SIGN IN</Link>
+            <Link to="/loginsignup">REGISTER</Link>
           </li>
           <li className="topListItem">
             <Link to="/admin/dashboard">ADMIN</Link>
