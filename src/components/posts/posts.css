@@ -62,8 +62,10 @@
 
 .blog img {
   width: 100%; /* Make image width 100% of its container */
-  height: auto; /* Maintain aspect ratio */
+  height: 50%;
   border-radius: 10px; /* Apply border radius */
+  margin-bottom: 10px;
+
 }
 
 .blog-footer {

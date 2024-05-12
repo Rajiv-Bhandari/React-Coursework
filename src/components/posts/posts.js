@@ -128,7 +128,7 @@ function Post() {
         {musicBlogs.map((blog) => (
           <div key={blog.id} className="blog col-lg-6">
             {blog.imageUrl ? (
-              <img src={blog.imageUrl} alt={blog.title} />
+              <img src={blog.imageUrl} alt={blog.title} width="100%"/>
             ) : (
               <div className="image-not-found">No Image Found</div>
             )}
@@ -148,9 +148,9 @@ function Post() {
 
       <div className="post-container row justify-content-center">
         {movieBlogs.map((blog) => (
-          <div key={blog.id} className="blog">
+          <div key={blog.id} className="blog col-lg-6">
             {blog.imageUrl ? (
-              <img src={blog.imageUrl} alt={blog.title} />
+              <img src={blog.imageUrl} alt={blog.title} width="100%"/>
             ) : (
               <div className="image-not-found">No Image Found</div>
             )}
@@ -171,7 +171,7 @@ function Post() {
         {techBlogs.map((blog) => (
           <div key={blog.id} className="blog">
             {blog.imageUrl ? (
-              <img src={blog.imageUrl} alt={blog.title} />
+              <img src={blog.imageUrl} alt={blog.title} width="100%"/>
             ) : (
               <div className="image-not-found">No Image Found</div>
             )}
