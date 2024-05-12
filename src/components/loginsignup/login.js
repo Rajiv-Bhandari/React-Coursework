@@ -5,15 +5,13 @@ import "./login.css";
 import Footer from "../footer/footer";
 import { jwtDecode } from "jwt-decode";
 import Cookies from "universal-cookie";
-
-// import { useHistory } from "react-router-dom"; // Assuming you're using React Router
+import { useNavigate } from "react-router-dom/dist";
 
 export default function Login() {
   const cookies = new Cookies();
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
-  // const history = useHistory();
-
+  const navigate = useNavigate();
   const handleSubmit = async (e) => {
     e.preventDefault();
 
@@ -39,13 +37,17 @@ export default function Login() {
       const decoded = jwtDecode(token);
       console.log(decoded);
 
-      // if (data.role === "ADMIN") {
-      //   history.push("/admin/dashboard");
-      // } else if (data.role === "BLOGGERS") {
-      //   history.push("/blogs");
-      // } else {
-      //   history.push("/");
-      // }
+      cookies.set("jwt_authorization", decoded, {
+        expires: new Date(decoded.exp * 1000),
+      });
+
+      if (decoded.role === "Admin") {
+        navigate("/admin/dashboard");
+      } else if (decoded.role === "Blogger") {
+        navigate("/blogs");
+      } else {
+        navigate("/");
+      }
     } catch (error) {
       console.error("Error:", error);
       toast.error("Failed to login. OK?");

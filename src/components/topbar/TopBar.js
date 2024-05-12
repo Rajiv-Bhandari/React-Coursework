@@ -65,7 +65,7 @@ export default function TopBar() {
           <li className="topListItem">
             <Link to="/login">
               <i class="fa fa-sign-out" aria-hidden="true"></i>
-              Logout
+              LogIn
             </Link>
           </li>
         </ul>
