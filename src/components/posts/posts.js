@@ -123,6 +123,7 @@ function Post() {
 
   return (
     <div>
+      <h2 className="text-center">Bislerium Blogs</h2>
       <div class="post-container row justify-content-center">
         {musicBlogs.map((blog) => (
           <div key={blog.id} className="blog col-lg-6">
