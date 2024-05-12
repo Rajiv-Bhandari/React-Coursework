@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import "./posts.css";
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import '@fortawesome/fontawesome-free/css/all.css';
 
 function Post() {
   const initialMusicBlogs = [
@@ -89,6 +90,7 @@ function Post() {
   const [musicBlogs, setMusicBlogs] = useState(initialMusicBlogs);
   const [movieBlogs, setMovieBlogs] = useState(initialMovieBlogs);
   const [techBlogs, setTechBlogs] = useState(initialTechBlogs);
+  const [votes, setVotes] = useState({});
 
   useEffect(() => {
     const fetchImages = async (blogs, setBlogs) => {
@@ -136,10 +138,19 @@ function Post() {
             <p>Author: {blog.author}</p>
             <p>{blog.content}</p>
             <div className="blog-footer">
+              <div className="vote-section">
+                <div className="vote-icon">
+                  <i className="fas fa-thumbs-up fa-2x"></i>
+                  <span className="vote-count">{votes[blog.id]?.up || 34}</span>
+                </div>
+                <div className="vote-icon">
+                  <i className="fas fa-thumbs-down fa-2x"></i>
+                  <span className="vote-count">{votes[blog.id]?.down || 6}</span>
+                </div>
+              </div>
               <Link to={`/post/details/`} className="read-more">
                 Read More
               </Link>
-              {/* Add like functionality if needed */}
             </div>
           </div>
         ))}
@@ -158,10 +169,19 @@ function Post() {
             <p>Author: {blog.author}</p>
             <p>{blog.content}</p>
             <div className="blog-footer">
+              <div className="vote-section">
+                <div className="vote-icon">
+                  <i className="fas fa-thumbs-up fa-2x"></i>
+                  <span className="vote-count">{votes[blog.id]?.up || 40}</span>
+                </div>
+                <div className="vote-icon">
+                  <i className="fas fa-thumbs-down fa-2x"></i>
+                  <span className="vote-count">{votes[blog.id]?.down || 1}</span>
+                </div>
+              </div>
               <Link to={`/post/details/`} className="read-more">
                 Read More
               </Link>
-              {/* Add like functionality if needed */}
             </div>
           </div>
         ))}
@@ -179,10 +199,19 @@ function Post() {
             <p>Author: {blog.author}</p>
             <p>{blog.content}</p>
             <div className="blog-footer">
+              <div className="vote-section">
+                <div className="vote-icon">
+                  <i className="fas fa-thumbs-up fa-2x"></i>
+                  <span className="vote-count">{votes[blog.id]?.up || 34}</span>
+                </div>
+                <div className="vote-icon">
+                  <i className="fas fa-thumbs-down fa-2x"></i>
+                  <span className="vote-count">{votes[blog.id]?.down || 9}</span>
+                </div>
+              </div>
               <Link to={`/post/details/`} className="read-more">
                 Read More
               </Link>
-              {/* Add like functionality if needed */}
             </div>
           </div>
         ))}
