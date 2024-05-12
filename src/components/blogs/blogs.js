@@ -1,8 +1,11 @@
 import React from "react";
 import "./blogs.css";
 import AddPost from "../posts/Addpost";
+import { useToken } from "@/utils/token";
 
 const Blog = ({ title, author, content }) => {
+  const Token = useToken();
+  console.log("Token", Token);
   return (
     <div className="blog">
       <h2>{title}</h2>
