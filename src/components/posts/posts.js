@@ -123,10 +123,9 @@ function Post() {
 
   return (
     <div>
-      <div className="post-container">
-        <h2>Music Blogs</h2>
+      <div class="post-container row justify-content-center">
         {musicBlogs.map((blog) => (
-          <div key={blog.id} className="blog">
+          <div key={blog.id} className="blog col-lg-6">
             {blog.imageUrl ? (
               <img src={blog.imageUrl} alt={blog.title} />
             ) : (
@@ -143,10 +142,10 @@ function Post() {
             </div>
           </div>
         ))}
+
       </div>
 
-      <div className="post-container">
-        <h2>Movie Blogs</h2>
+      <div className="post-container row justify-content-center">
         {movieBlogs.map((blog) => (
           <div key={blog.id} className="blog">
             {blog.imageUrl ? (
@@ -167,8 +166,7 @@ function Post() {
         ))}
       </div>
 
-      <div className="post-container">
-        <h2>Tech Blogs</h2>
+      <div className="post-container row justify-content-center">
         {techBlogs.map((blog) => (
           <div key={blog.id} className="blog">
             {blog.imageUrl ? (
