@@ -1,98 +1,74 @@
-import React, { useState } from 'react';
-import './addpost.css';
+import React, { useState } from "react";
+import "./addpost.css";
 import Footer from "../footer/footer";
-import { toast, ToastContainer } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
-import { useNavigate } from 'react-router-dom';
-
-const categories = ['Life', 'Music', 'Style', 'Sport', 'Tech', 'Cinema', 'Romance'];
+import { toast } from "react-toastify";
+import { useNavigate } from "react-router-dom";
 
 export default function AddPost() {
-  const [title, setTitle] = useState('');
-  const [image, setImage] = useState('');
-  const [description, setDescription] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState(categories[0]);
+  const [title, setTitle] = useState("");
+  const [description, setDescription] = useState("");
 
   const navigate = useNavigate();
 
-  const handleTitleChange = (event) => {
-    setTitle(event.target.value);
-  };
-
-  const handleImageChange = (event) => {
-    setImage(event.target.value);
-  };
-
-  const handleDescriptionChange = (event) => {
-    setDescription(event.target.value);
-  };
-
-  const handleCategoryChange = (event) => {
-    setSelectedCategory(event.target.value);
-  };
-
   const handleSubmit = async (event) => {
     event.preventDefault();
-    
-    const data = {
-      title: title,
-      description: description
-    };
-  
+
     try {
-      const response = await fetch('https://localhost:7186/api/post/create-post', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(data)
-      });
-  
-      if (response.ok) {
-        console.log('Post created successfully!');
-        toast.success('Post created successfully');
-        setTimeout(() => {
-          navigate('/blogs');
-        }, 1000); 
-      } else {
-        console.error('Failed to create post.');
-        toast.error('Failed to create post from backend');
+      const response = await fetch(
+        "https://localhost:7186/api/post/create-post",
+        {
+          method: "POST",
+          mode: "cors",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ title, description }),
+        }
+      );
+
+      if (!response.ok) {
+        throw new Error("Failed to create post.");
       }
+
+      const data = await response.json();
+      console.log(data);
+
+      console.log("Post created successfully!");
+      toast.success("Post created successfully");
+      navigate("/blogs");
     } catch (error) {
-      console.error('Error:', error);
-      toast.error('Failed to create post');
-      setTimeout(() => {
-        navigate('/blogs');
-      }, 1000);    
+      console.error("Error:", error);
+      toast.error("Failed to create post");
+      navigate("/blogs");
     }
   };
-  
 
   return (
     <>
-    <div className="add-post-container">
-      <h2>Add Post</h2>
-      <form onSubmit={handleSubmit}>
-        <label htmlFor="title">Title:</label>
-        <input type="text" id="title" value={title} onChange={handleTitleChange} required />
-        
-        <label htmlFor="image">Image:</label>
-        <input type="file" id="image" value={image} onChange={handleImageChange} />
+      <div className="add-post-container">
+        <h2>Add Post</h2>
+        <form onSubmit={handleSubmit}>
+          <label htmlFor="title">Title:</label>
+          <input
+            type="text"
+            id="title"
+            value={title}
+            onChange={(e) => setTitle(e.target.value)}
+            required
+          />
 
-        <label htmlFor="description">Description:</label>
-        <textarea id="description" value={description} onChange={handleDescriptionChange} required />
-        
-        <label htmlFor="category">Category:</label>
-        <select id="category" value={selectedCategory} onChange={handleCategoryChange}>
-          {categories.map(category => (
-            <option key={category} value={category}>{category}</option>
-          ))}
-        </select>
+          <label htmlFor="description">Description:</label>
+          <textarea
+            id="description"
+            value={description}
+            onChange={(e) => setDescription(e.target.value)}
+            required
+          />
 
-        <button type="submit">Submit</button>
-      </form>
-    </div>
-    <Footer/>
+          <button type="submit">Submit</button>
+        </form>
+      </div>
+      <Footer />
     </>
   );
 }
