@@ -18,10 +18,10 @@ function Footer() {
           <div className="text-center">
             <h3>Quick Links</h3>
             <ul class="footer-links">
-              <li><Link to="/home" className="footerItem">
+              <li><Link to="/" className="footerItem">
                 Home
               </Link></li>
-              <li><Link to="/post" className="footerItem">
+              <li><Link to="/blogs" className="footerItem">
                 Blog
               </Link></li>
               <li><Link to="/contact" className="footerItem">
